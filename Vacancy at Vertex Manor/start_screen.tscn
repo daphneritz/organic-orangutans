@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkd6a2l5365bh"]
+
+[ext_resource type="Texture2D" path="res://manor outside.jpg" id="1_q5wv0"]
+[ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="2_b3i6q"]
+[ext_resource type="FontFile" path="res://Apple Chancery Chancery.ttf" id="3_ejcy1"]
+[ext_resource type="Script" path="res://Button.gd" id="4_8vukh"]
+
+[sub_resource type="Gradient" id="Gradient_ih4si"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.584416, 1)
+colors = PackedColorArray(0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0.764706, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_guode"]
+gradient = SubResource("Gradient_ih4si")
+use_hdr = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86tat"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_b2qoq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erhma"]
+texture = SubResource("PlaceholderTexture2D_b2qoq")
+modulate_color = Color(0.6, 0.443137, 0.513726, 1)
+
+[sub_resource type="Theme" id="Theme_tv41w"]
+default_font = ExtResource("3_ejcy1")
+default_font_size = 40
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxTexture_86tat")
+Button/styles/pressed = SubResource("StyleBoxTexture_erhma")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ManorOutside" type="Sprite2D" parent="."]
+position = Vector2(386, 322)
+scale = Vector2(0.748487, 0.748487)
+texture = ExtResource("1_q5wv0")
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576.5, 328)
+scale = Vector2(18.0156, 10.3125)
+texture = SubResource("GradientTexture2D_guode")
+
+[node name="title" type="Label" parent="."]
+offset_left = 770.0
+offset_top = 34.0
+offset_right = 1150.0
+offset_bottom = 254.0
+theme = ExtResource("2_b3i6q")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "Vacancy at Vertex Manor"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 847.0
+offset_top = 278.0
+offset_right = 1070.0
+offset_bottom = 379.0
+theme = SubResource("Theme_tv41w")
+text = "Start"
+script = ExtResource("4_8vukh")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

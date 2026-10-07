@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d3d6ncs3w730i"]
+
+[ext_resource type="FontFile" uid="uid://cp2uuo43dh382" path="res://Clairvaux LT Std Roman.otf" id="1_lf64y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xoy1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gj3k4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdx0i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6j3ig"]
+
+[resource]
+default_font = ExtResource("1_lf64y")
+default_font_size = 20
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/icon_hover_color = Color(0.337255, 0.12549, 0.196078, 1)
+Button/colors/icon_hover_pressed_color = Color(0.337255, 0.12549, 0.196078, 1)
+Button/colors/icon_normal_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/icon_pressed_color = Color(0.337255, 0.12549, 0.196078, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_xoy1o")
+Button/styles/hover = SubResource("StyleBoxEmpty_gj3k4")
+Button/styles/normal = SubResource("StyleBoxEmpty_bdx0i")
+Button/styles/pressed = SubResource("StyleBoxEmpty_6j3ig")

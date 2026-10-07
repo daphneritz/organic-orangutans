@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://njjntrgljuk8"]
+
+[ext_resource type="Texture2D" uid="uid://odhuulq5ssc5" path="res://assets/dollhouse picture.jpg" id="1_dxp66"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(571, 313)
+scale = Vector2(1.12869, 1.12869)
+texture = ExtResource("1_dxp66")
