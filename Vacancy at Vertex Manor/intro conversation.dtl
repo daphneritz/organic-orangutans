@@ -1,0 +1,27 @@
+[background arg="res://assets/parlor room.png" fade="0.0"]
+join groundskeeper left
+groundskeeper: Hmm...
+- Hello?
+groundskeeper: You're the journalist?
+- Yes. I recieved an invitation...
+groundskeeper: Are you an investigative journalist?
+- Well, not technically-
+groundskeeper: I need you to do some investigatin'.
+- What?
+groundskeeper: I know you're here for the will readin'. The issue is...
+groundskeeper: Well, the kid's gone missin'.
+groundskeeper: This morning, I saw the dog waitin' at the door.
+groundskeeper: The kid would let the dog out as soon as they woke up, every mornin'. Without fail.
+groundskeeper: So I went to see if they maybe were still asleep.
+groundskeeper: The bed was unmade, the kid nowhere to be found.
+groundskeeper: I don't think they'd've just left. 'Specially without the dog.
+groundskeeper: I got to thinkin'... What if one of the people here wanted them gotten rid of?
+groundskeeper: Maybe somethin' in that will they didn't like...
+groundskeeper: Nobody'd talk to me. So...
+- So you want me to look into it?
+groundskeeper: Precisely. Maybe without raisin' their suspicions too much...
+groundskeeper: Ever since what happened ten years ago... these people can be paranoid.
+- What happened ten years ago?
+groundskeeper: It's not for me to say. I'd talk to Matilda, if I were you. She's in the dinin' room.
+- Okay...
+groundskeeper: Down the hall to the right.

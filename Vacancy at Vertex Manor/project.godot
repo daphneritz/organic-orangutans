@@ -25,9 +25,19 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
-layout/style_directory={}
+directories/dch_directory={
+"groundskeeper": "res://groundskeeper.dch"
+}
+directories/dtl_directory={
+"intro conversation": "res://intro conversation.dtl"
+}
+layout/style_directory={
+"": "res://characters/character portraits/text style.tres",
+"text style": "res://characters/character portraits/text style.tres"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://characters/character portraits/text style.tres"]
+layout/default_style="res://characters/character portraits/text style.tres"
 
 [editor_plugins]
 

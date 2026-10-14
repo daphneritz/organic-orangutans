@@ -5,6 +5,6 @@
 [node name="Node2D" type="Node2D" unique_id=1067673544]
 
 [node name="SplitViewHouse" type="Sprite2D" parent="." unique_id=128283392]
-position = Vector2(578.00006, 324)
+position = Vector2(576.00006, 324)
 scale = Vector2(1.6848552, 1.6848552)
 texture = ExtResource("1_2ll4f")
