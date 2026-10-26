@@ -15,21 +15,28 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Vacancy at Vertex Manor"
-run/main_scene="res://start_screen.tscn"
+run/main_scene="uid://dg3twhrbqxny"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://b21gdmugk21yv"
 
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+Gymnopedie="*uid://cf3ap6oa2vaa3"
 
 [dialogic]
 
 directories/dch_directory={
-"groundskeeper": "res://groundskeeper.dch"
+"groundskeeper": "res://groundskeeper.dch",
+"matilda": "res://characters/matilda.dch"
 }
 directories/dtl_directory={
-"intro conversation": "res://intro conversation.dtl"
+"intro conversation": "res://intro conversation.dtl",
+"matilda convo": "res://timelines/matilda convo.dtl"
 }
 layout/style_directory={
 "": "res://characters/character portraits/text style.tres",
@@ -38,6 +45,10 @@ layout/style_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://characters/character portraits/text style.tres"]
 layout/default_style="res://characters/character portraits/text style.tres"
+
+[display]
+
+window/main_scene="uid://dg3twhrbqxny"
 
 [editor_plugins]
 

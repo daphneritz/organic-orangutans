@@ -1,10 +1,58 @@
 [gd_scene format=3 uid="uid://dunklx6gpx58a"]
 
-[ext_resource type="Texture2D" uid="uid://cs7rbx07v7qrb" path="res://assets/split view house.jpg" id="1_2ll4f"]
+[ext_resource type="Texture2D" uid="uid://cnev0fcgh5bp4" path="res://assets/dollhouse replacement.png" id="1_eibs5"]
+[ext_resource type="Script" uid="uid://d16ca34o72ii5" path="res://scenes/dollhouse_scene.gd" id="1_kuc3c"]
+[ext_resource type="Script" uid="uid://dnutdexa8aljs" path="res://scenes/parlor room launch.gd" id="2_jotf0"]
+[ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="3_eibs5"]
+[ext_resource type="Script" uid="uid://bpd2mujdqotdh" path="res://scenes/dining room launch.gd" id="4_eibs5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
+size = Vector2(355.25, 223)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqkg7"]
+size = Vector2(304.25, 221)
 
 [node name="Node2D" type="Node2D" unique_id=1067673544]
+script = ExtResource("1_kuc3c")
 
-[node name="SplitViewHouse" type="Sprite2D" parent="." unique_id=128283392]
-position = Vector2(576.00006, 324)
-scale = Vector2(1.6848552, 1.6848552)
-texture = ExtResource("1_2ll4f")
+[node name="DollhouseReplacement" type="Sprite2D" parent="." unique_id=544334744]
+position = Vector2(576, 325)
+texture = ExtResource("1_eibs5")
+
+[node name="parlor room" type="Area2D" parent="." unique_id=1477262737]
+script = ExtResource("2_jotf0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parlor room" unique_id=1148784741]
+position = Vector2(630.375, 513)
+shape = SubResource("RectangleShape2D_8bigk")
+
+[node name="dining room" type="Area2D" parent="." unique_id=542589240]
+script = ExtResource("4_eibs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dining room" unique_id=1613612337]
+position = Vector2(299.875, 512)
+shape = SubResource("RectangleShape2D_mqkg7")
+
+[node name="Label2" type="Label" parent="." unique_id=1433008392]
+offset_left = 267.0
+offset_top = 576.0
+offset_right = 439.0
+offset_bottom = 616.0
+theme = ExtResource("3_eibs5")
+theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
+theme_override_font_sizes/font_size = 38
+text = "dining room"
+
+[node name="Label" type="Label" parent="." unique_id=1217487665]
+offset_left = 615.0
+offset_top = 578.0
+offset_right = 784.0
+offset_bottom = 618.0
+theme = ExtResource("3_eibs5")
+theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
+theme_override_font_sizes/font_size = 38
+text = "parlor room"
+
+[connection signal="input_event" from="parlor room" to="parlor room" method="_on_input_event"]
+[connection signal="input_event" from="dining room" to="parlor room" method="_on_dining_room_input_event"]
+[connection signal="input_event" from="dining room" to="dining room" method="_on_input_event"]

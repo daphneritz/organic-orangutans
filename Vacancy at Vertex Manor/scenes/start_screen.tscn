@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dg3twhrbqxny"]
 
+[ext_resource type="Script" uid="uid://badbqusta5u0h" path="res://scenes/start_screen.gd" id="1_5pab1"]
 [ext_resource type="Texture2D" uid="uid://hmnona0mtkdh" path="res://assets/manor outside.jpg" id="1_q5wv0"]
 [ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="2_b3i6q"]
 [ext_resource type="FontFile" uid="uid://43ldyjkjptl8" path="res://assets/Apple Chancery Chancery.ttf" id="3_ejcy1"]
@@ -15,30 +16,56 @@ colors = PackedColorArray(0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0
 gradient = SubResource("Gradient_ih4si")
 use_hdr = true
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86tat"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o30b1"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_b2qoq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hm208"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.360784, 0.423529, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 1
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erhma"]
-texture = SubResource("PlaceholderTexture2D_b2qoq")
-modulate_color = Color(0.6, 0.443137, 0.513726, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pab1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.360784, 0.423529, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
 
 [sub_resource type="Theme" id="Theme_tv41w"]
 default_font = ExtResource("3_ejcy1")
 default_font_size = 40
 Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_focus_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/styles/disabled = null
-Button/styles/focus = null
-Button/styles/hover = null
-Button/styles/normal = SubResource("StyleBoxTexture_86tat")
-Button/styles/pressed = SubResource("StyleBoxTexture_erhma")
+Button/colors/font_focus_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/font_hover_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/font_hover_pressed_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/font_outline_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/font_pressed_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/icon_focus_color = Color(0.6, 0.443137, 0.513726, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(0.6, 0.360784, 0.423529, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_o30b1")
+Button/styles/focus = SubResource("StyleBoxFlat_hm208")
+Button/styles/hover = SubResource("StyleBoxFlat_hm208")
+Button/styles/normal = SubResource("StyleBoxFlat_hm208")
+Button/styles/pressed = SubResource("StyleBoxFlat_5pab1")
 
 [node name="Node2D" type="Node2D" unique_id=47258664]
+script = ExtResource("1_5pab1")
 
 [node name="ManorOutside" type="Sprite2D" parent="." unique_id=1280814592]
 position = Vector2(398, 328)
@@ -52,10 +79,11 @@ scale = Vector2(18.0156, 10.3125)
 texture = SubResource("GradientTexture2D_guode")
 
 [node name="title" type="Label" parent="." unique_id=1433993632]
-offset_left = 770.0
-offset_top = 34.0
-offset_right = 1150.0
-offset_bottom = 254.0
+custom_maximum_size = Vector2(350, 1000)
+offset_left = 791.0
+offset_top = 42.0
+offset_right = 1141.0
+offset_bottom = 177.0
 theme = ExtResource("2_b3i6q")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 65
@@ -63,6 +91,7 @@ text = "Vacancy at Vertex Manor"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+max_lines_visible = 3
 
 [node name="Button" type="Button" parent="." unique_id=1226803113]
 offset_left = 847.0

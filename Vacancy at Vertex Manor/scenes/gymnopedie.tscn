@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cf3ap6oa2vaa3"]
+
+[ext_resource type="Script" uid="uid://c27rx2ea8kjg0" path="res://scenes/gymnopedie.gd" id="1_flig3"]
+
+[node name="Gymnopedie" type="AudioStreamPlayer2D" unique_id=216600616]
+script = ExtResource("1_flig3")

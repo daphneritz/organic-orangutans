@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://crvu5cppah64e"]
+
+[ext_resource type="Script" uid="uid://b12ncwaxr58t7" path="res://scripts/parlor_room.gd" id="1_iq5bm"]
+[ext_resource type="Texture2D" uid="uid://dftnlqq31xsl1" path="res://assets/parlor room.png" id="2_vum12"]
+[ext_resource type="Script" uid="uid://b3x4nmhak63ti" path="res://intro convo.gd" id="3_eqopf"]
+[ext_resource type="Texture2D" uid="uid://cgo8mxpr1n72x" path="res://characters/character portraits/groundskeeper full body placeholder.png" id="4_w75vo"]
+[ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="5_qpbud"]
+[ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="6_gomkn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_turhl"]
+radius = 92.0
+height = 464.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
+size = Vector2(63, 66)
+
+[node name="Node2D" type="Node2D" unique_id=1561387862]
+script = ExtResource("1_iq5bm")
+
+[node name="ParlorRoom" type="Sprite2D" parent="." unique_id=265900898]
+position = Vector2(576, 318)
+scale = Vector2(0.84619623, 0.84619623)
+texture = ExtResource("2_vum12")
+
+[node name="groundskeeper" type="Area2D" parent="." unique_id=2040328302]
+script = ExtResource("3_eqopf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groundskeeper" unique_id=651212703]
+position = Vector2(328, 402)
+shape = SubResource("CapsuleShape2D_turhl")
+
+[node name="GroundskeeperFullBodyPlaceholder" type="Sprite2D" parent="groundskeeper" unique_id=1974464368]
+position = Vector2(318, 400.00003)
+scale = Vector2(0.32795697, 0.327957)
+texture = ExtResource("4_w75vo")
+
+[node name="map" type="Area2D" parent="." unique_id=1091541448]
+script = ExtResource("5_qpbud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map" unique_id=497834420]
+position = Vector2(52.5, 592)
+shape = SubResource("RectangleShape2D_8bigk")
+
+[node name="Map" type="Sprite2D" parent="map" unique_id=1882621877]
+position = Vector2(55.000008, 593.00006)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("6_gomkn")
+
+[connection signal="input_event" from="groundskeeper" to="groundskeeper" method="_on_input_event"]
+[connection signal="input_event" from="map" to="." method="_on_map_input_event"]
