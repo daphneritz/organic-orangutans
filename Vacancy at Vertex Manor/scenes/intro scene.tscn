@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cg1n3k1gnver8"]
+
+[node name="Node2D" type="Node2D" unique_id=305958757]
+
+[node name="Label" type="Label" parent="." unique_id=399206618]
+offset_right = 950.0
+offset_bottom = 239.0
+text = "we want you to attend this will reading and report on it thanks champ much appreciated --> pan to manor outside --> click to approach and enter --> knock on door? --> move to entryway --> talk to groundskeeper --> move to map and dollhouse view "
+autowrap_mode = 2

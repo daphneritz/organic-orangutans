@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://43ldyjkjptl8" path="res://assets/Apple Chancery Chancery.ttf" id="3_ejcy1"]
 [ext_resource type="Script" uid="uid://b0rg34tfiu868" path="res://Button.gd" id="4_4vw88"]
 [ext_resource type="Texture2D" uid="uid://b0fdl56alnobs" path="res://assets/asfalt-light.png" id="5_hm208"]
+[ext_resource type="Script" uid="uid://oe8578lm0r2n" path="res://scenes/settings page.gd" id="7_o30b1"]
 
 [sub_resource type="Gradient" id="Gradient_ih4si"]
 interpolation_mode = 1
@@ -93,7 +94,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 max_lines_visible = 3
 
-[node name="Button" type="Button" parent="." unique_id=1226803113]
+[node name="start" type="Button" parent="." unique_id=1226803113]
 offset_left = 847.0
 offset_top = 278.0
 offset_right = 1070.0
@@ -108,4 +109,14 @@ position = Vector2(578, 329)
 scale = Vector2(2.472103, 1.8911176)
 texture = ExtResource("5_hm208")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="settings" type="Button" parent="." unique_id=35098927]
+offset_left = 847.0
+offset_top = 398.0
+offset_right = 1070.0
+offset_bottom = 499.0
+theme = SubResource("Theme_tv41w")
+text = "Settings"
+script = ExtResource("7_o30b1")
+
+[connection signal="pressed" from="start" to="start" method="_on_pressed"]
+[connection signal="pressed" from="settings" to="settings" method="_on_pressed"]

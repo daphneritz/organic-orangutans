@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bfr10r8fbuoj8"]
+
+[sub_resource type="Gradient" id="Gradient_ih4si"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.584416, 1)
+colors = PackedColorArray(0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0.764706, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pfmur"]
+gradient = SubResource("Gradient_ih4si")
+use_hdr = true
+
+[node name="Node2D" type="Node2D" unique_id=229795180]
+
+[node name="background" type="Sprite2D" parent="." unique_id=2146336543]
+z_index = -2
+position = Vector2(576.5, 328)
+scale = Vector2(18.0156, 10.3125)
+texture = SubResource("GradientTexture2D_pfmur")
