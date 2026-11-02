@@ -3,16 +3,22 @@
 [ext_resource type="Script" uid="uid://b3sorn367rqsu" path="res://scenes/dining_room.gd" id="1_4bvm6"]
 [ext_resource type="Texture2D" uid="uid://chdytebp58t5i" path="res://assets/dining room.jpg" id="1_a0ho6"]
 [ext_resource type="Script" uid="uid://lxoilw1wu01u" path="res://scenes/matilda convo.gd" id="2_144f0"]
-[ext_resource type="Texture2D" uid="uid://c7mhm8qymd1w1" path="res://characters/character portraits/matilda placeholder.png" id="3_hk0ip"]
 [ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="4_hk0ip"]
 [ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="5_4bvm6"]
+[ext_resource type="Texture2D" uid="uid://cnlmsdn12ue5w" path="res://characters/character portraits/TransparentBGMatilda.png" id="6_4bvm6"]
+[ext_resource type="Script" uid="uid://cwqwnxjhyge8v" path="res://scenes/gertrude.gd" id="7_edguv"]
+[ext_resource type="Texture2D" uid="uid://cjaw0uraiannw" path="res://characters/character portraits/TransparentBGGurtrude.png" id="8_ivenr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqkg7"]
-radius = 73.0
+radius = 53.0
 height = 440.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05e24"]
 size = Vector2(56, 62)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
+radius = 88.0
+height = 304.0
 
 [node name="DiningRoom" type="Node2D" unique_id=122451375]
 script = ExtResource("1_4bvm6")
@@ -29,10 +35,10 @@ script = ExtResource("2_144f0")
 position = Vector2(154, 326)
 shape = SubResource("CapsuleShape2D_mqkg7")
 
-[node name="MatildaPlaceholder" type="Sprite2D" parent="matilda" unique_id=1846437676]
-position = Vector2(156, 326)
-scale = Vector2(0.73214287, 0.73214287)
-texture = ExtResource("3_hk0ip")
+[node name="TransparentBgMatilda" type="Sprite2D" parent="matilda" unique_id=599432135]
+position = Vector2(193.00002, 338.00003)
+scale = Vector2(1.0662651, 1.0662651)
+texture = ExtResource("6_4bvm6")
 
 [node name="map2" type="Area2D" parent="." unique_id=1228863502]
 script = ExtResource("4_hk0ip")
@@ -46,5 +52,19 @@ position = Vector2(55.000008, 593.00006)
 scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("5_4bvm6")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=699408890]
+script = ExtResource("7_edguv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=543392340]
+position = Vector2(832, 447)
+shape = SubResource("CapsuleShape2D_8bigk")
+
+[node name="TransparentBgGurtrude" type="Sprite2D" parent="Area2D" unique_id=1953756]
+position = Vector2(826.99994, 448.99997)
+rotation = 0.10785241
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_ivenr")
+
 [connection signal="input_event" from="matilda" to="matilda" method="_on_input_event"]
 [connection signal="input_event" from="map2" to="map2" method="_on_input_event"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

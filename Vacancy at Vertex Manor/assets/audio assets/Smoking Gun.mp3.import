@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnx44ffxejbko"
+path="res://.godot/imported/Smoking Gun.mp3-06b6125ef7e469268cb69f6c6c72d93b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio assets/Smoking Gun.mp3"
+dest_files=["res://.godot/imported/Smoking Gun.mp3-06b6125ef7e469268cb69f6c6c72d93b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

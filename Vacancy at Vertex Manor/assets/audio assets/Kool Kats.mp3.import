@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ji07k8t4lw04"
+path="res://.godot/imported/Kool Kats.mp3-52af2af108a805c3adacf4ba96d97b0b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio assets/Kool Kats.mp3"
+dest_files=["res://.godot/imported/Kool Kats.mp3-52af2af108a805c3adacf4ba96d97b0b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

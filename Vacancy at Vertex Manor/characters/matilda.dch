@@ -19,7 +19,7 @@
 &"portraits": {
 "matilda placeholder": {
 "export_overrides": {
-"image": "\"res://characters/character portraits/matilda up close.jpg\""
+"image": "\"res://characters/character portraits/close up matilda.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -27,5 +27,5 @@
 "scene": ""
 }
 },
-&"scale": 1.0
+&"scale": 0.75
 }

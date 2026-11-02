@@ -1,6 +1,6 @@
 extends AudioStreamPlayer2D
 
-const level_music = preload("res://assets/audio assets/Gymnopedie No 1.mp3")
+const level_music = preload("res://assets/audio assets/Vibing Over Venus.mp3")
 
 func play_music(music: AudioStream, volume: float = 0.0) -> void:
 	if stream == music and playing:

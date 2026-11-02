@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crvu5cppah64e"]
 
 [ext_resource type="Script" uid="uid://b12ncwaxr58t7" path="res://scripts/parlor_room.gd" id="1_iq5bm"]
-[ext_resource type="Texture2D" uid="uid://dftnlqq31xsl1" path="res://assets/parlor room.png" id="2_vum12"]
+[ext_resource type="Texture2D" uid="uid://b8ciuit3hxobp" path="res://assets/entryway.jpg" id="2_iq5bm"]
 [ext_resource type="Script" uid="uid://b3x4nmhak63ti" path="res://intro convo.gd" id="3_eqopf"]
 [ext_resource type="Texture2D" uid="uid://cgo8mxpr1n72x" path="res://characters/character portraits/groundskeeper full body placeholder.png" id="4_w75vo"]
 [ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="5_qpbud"]
@@ -14,13 +14,13 @@ height = 464.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(63, 66)
 
-[node name="Node2D" type="Node2D" unique_id=1561387862]
+[node name="Node2D2" type="Node2D" unique_id=1561387862]
 script = ExtResource("1_iq5bm")
 
-[node name="ParlorRoom" type="Sprite2D" parent="." unique_id=265900898]
-position = Vector2(576, 318)
-scale = Vector2(0.84619623, 0.84619623)
-texture = ExtResource("2_vum12")
+[node name="Entryway" type="Sprite2D" parent="." unique_id=2037554850]
+position = Vector2(578.6625, 320.00003)
+scale = Vector2(0.53999996, 0.53999996)
+texture = ExtResource("2_iq5bm")
 
 [node name="groundskeeper" type="Area2D" parent="." unique_id=2040328302]
 script = ExtResource("3_eqopf")

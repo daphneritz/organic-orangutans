@@ -31,10 +31,12 @@ Gymnopedie="*uid://cf3ap6oa2vaa3"
 [dialogic]
 
 directories/dch_directory={
+"gertrude": "res://characters/gertrude.dch",
 "groundskeeper": "res://groundskeeper.dch",
 "matilda": "res://characters/matilda.dch"
 }
 directories/dtl_directory={
+"gertrude": "res://timelines/gertrude.dtl",
 "intro conversation": "res://intro conversation.dtl",
 "matilda convo": "res://timelines/matilda convo.dtl"
 }
