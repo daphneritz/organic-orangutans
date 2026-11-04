@@ -36,8 +36,8 @@ position = Vector2(154, 326)
 shape = SubResource("CapsuleShape2D_mqkg7")
 
 [node name="TransparentBgMatilda" type="Sprite2D" parent="matilda" unique_id=599432135]
-position = Vector2(193.00002, 338.00003)
-scale = Vector2(1.0662651, 1.0662651)
+position = Vector2(192.25, 339.8118)
+scale = Vector2(1.0572288, 1.0572288)
 texture = ExtResource("6_4bvm6")
 
 [node name="map2" type="Area2D" parent="." unique_id=1228863502]
@@ -60,9 +60,9 @@ position = Vector2(832, 447)
 shape = SubResource("CapsuleShape2D_8bigk")
 
 [node name="TransparentBgGurtrude" type="Sprite2D" parent="Area2D" unique_id=1953756]
-position = Vector2(826.99994, 448.99997)
+position = Vector2(838.63995, 433.5075)
 rotation = 0.10785241
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1.1106672, 1.1106671)
 texture = ExtResource("8_ivenr")
 
 [connection signal="input_event" from="matilda" to="matilda" method="_on_input_event"]

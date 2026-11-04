@@ -1,21 +1,12 @@
 [gd_scene format=3 uid="uid://dg3twhrbqxny"]
 
 [ext_resource type="Script" uid="uid://badbqusta5u0h" path="res://scenes/start_screen.gd" id="1_5pab1"]
-[ext_resource type="Texture2D" uid="uid://hmnona0mtkdh" path="res://assets/manor outside.jpg" id="1_q5wv0"]
 [ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="2_b3i6q"]
 [ext_resource type="FontFile" uid="uid://43ldyjkjptl8" path="res://assets/Apple Chancery Chancery.ttf" id="3_ejcy1"]
 [ext_resource type="Script" uid="uid://b0rg34tfiu868" path="res://Button.gd" id="4_4vw88"]
-[ext_resource type="Texture2D" uid="uid://b0fdl56alnobs" path="res://assets/asfalt-light.png" id="5_hm208"]
+[ext_resource type="Texture2D" uid="uid://btvu2hx42bm3u" path="res://assets/start screen rbg.png" id="5_hm208"]
+[ext_resource type="Texture2D" uid="uid://664ro0aoxyr8" path="res://assets/logo demo 2.png" id="7_ka6nf"]
 [ext_resource type="Script" uid="uid://oe8578lm0r2n" path="res://scenes/settings page.gd" id="7_o30b1"]
-
-[sub_resource type="Gradient" id="Gradient_ih4si"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.584416, 1)
-colors = PackedColorArray(0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0.764706, 1, 0.364706, 0.552941, 0.764706, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_guode"]
-gradient = SubResource("Gradient_ih4si")
-use_hdr = true
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o30b1"]
 
@@ -68,46 +59,14 @@ Button/styles/pressed = SubResource("StyleBoxFlat_5pab1")
 [node name="Node2D" type="Node2D" unique_id=47258664]
 script = ExtResource("1_5pab1")
 
-[node name="ManorOutside" type="Sprite2D" parent="." unique_id=1280814592]
-position = Vector2(398, 328)
-scale = Vector2(0.748487, 0.748487)
-texture = ExtResource("1_q5wv0")
-
-[node name="background" type="Sprite2D" parent="." unique_id=584151455]
-z_index = -2
-position = Vector2(576.5, 328)
-scale = Vector2(18.0156, 10.3125)
-texture = SubResource("GradientTexture2D_guode")
-
-[node name="title" type="Label" parent="." unique_id=1433993632]
-custom_maximum_size = Vector2(350, 1000)
-offset_left = 791.0
-offset_top = 42.0
-offset_right = 1141.0
-offset_bottom = 177.0
-theme = ExtResource("2_b3i6q")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 65
-text = "Vacancy at Vertex Manor"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-max_lines_visible = 3
-
 [node name="start" type="Button" parent="." unique_id=1226803113]
-offset_left = 847.0
-offset_top = 278.0
-offset_right = 1070.0
-offset_bottom = 379.0
+offset_left = 482.0
+offset_top = 349.0
+offset_right = 705.0
+offset_bottom = 450.0
 theme = SubResource("Theme_tv41w")
 text = "Start"
 script = ExtResource("4_4vw88")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1098974021]
-z_index = -2
-position = Vector2(578, 329)
-scale = Vector2(2.472103, 1.8911176)
-texture = ExtResource("5_hm208")
 
 [node name="settings" type="Button" parent="." unique_id=35098927]
 offset_left = 847.0
@@ -117,6 +76,25 @@ offset_bottom = 499.0
 theme = SubResource("Theme_tv41w")
 text = "Settings"
 script = ExtResource("7_o30b1")
+
+[node name="StartScreenRbg" type="Sprite2D" parent="." unique_id=782410406]
+position = Vector2(574.7173, 326.75)
+scale = Vector2(0.5117278, 0.51172787)
+texture = ExtResource("5_hm208")
+
+[node name="Label" type="Label" parent="." unique_id=927372009]
+offset_left = 442.0
+offset_top = 222.0
+offset_right = 686.0
+offset_bottom = 283.0
+theme = ExtResource("2_b3i6q")
+theme_override_font_sizes/font_size = 60
+text = "Vacancy at"
+
+[node name="LogoDemo2" type="Sprite2D" parent="." unique_id=28854203]
+position = Vector2(1320, 282)
+scale = Vector2(0.15537164, 0.15537168)
+texture = ExtResource("7_ka6nf")
 
 [connection signal="pressed" from="start" to="start" method="_on_pressed"]
 [connection signal="pressed" from="settings" to="settings" method="_on_pressed"]
