@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="2_b3i6q"]
 [ext_resource type="FontFile" uid="uid://43ldyjkjptl8" path="res://assets/Apple Chancery Chancery.ttf" id="3_ejcy1"]
 [ext_resource type="Script" uid="uid://b0rg34tfiu868" path="res://Button.gd" id="4_4vw88"]
-[ext_resource type="Texture2D" uid="uid://btvu2hx42bm3u" path="res://assets/start screen rbg.png" id="5_hm208"]
+[ext_resource type="Texture2D" uid="uid://dtyxcuijdfw80" path="res://assets/Screenshot 2026-11-04 112149.png" id="5_o30b1"]
 [ext_resource type="Texture2D" uid="uid://664ro0aoxyr8" path="res://assets/logo demo 2.png" id="7_ka6nf"]
 [ext_resource type="Script" uid="uid://oe8578lm0r2n" path="res://scenes/settings page.gd" id="7_o30b1"]
 
@@ -77,10 +77,10 @@ theme = SubResource("Theme_tv41w")
 text = "Settings"
 script = ExtResource("7_o30b1")
 
-[node name="StartScreenRbg" type="Sprite2D" parent="." unique_id=782410406]
-position = Vector2(574.7173, 326.75)
-scale = Vector2(0.5117278, 0.51172787)
-texture = ExtResource("5_hm208")
+[node name="Screenshot20261104112149" type="Sprite2D" parent="." unique_id=505377257]
+position = Vector2(572.8362, 323.25)
+scale = Vector2(0.51094604, 0.51094604)
+texture = ExtResource("5_o30b1")
 
 [node name="Label" type="Label" parent="." unique_id=927372009]
 offset_left = 442.0
