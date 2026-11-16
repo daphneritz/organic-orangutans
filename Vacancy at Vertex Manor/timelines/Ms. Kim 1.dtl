@@ -1,4 +1,4 @@
-join "Ms Kim" center
+join "Ms Kim" left
 set {kim.spoke} += 1.0
 "Ms Kim": Oh, hello! Who might you be?
 - A reporter.

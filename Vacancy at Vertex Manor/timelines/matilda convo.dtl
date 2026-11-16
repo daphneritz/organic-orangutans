@@ -1,5 +1,5 @@
 join matilda left
-set {matilda.spoke} = true
+set {matilda.spoke} += 1.0
 - Are you Matilda?
 matilda: Yes I am.
 matilda: And...

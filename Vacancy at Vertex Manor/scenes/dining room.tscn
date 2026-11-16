@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="5_4bvm6"]
 [ext_resource type="Texture2D" uid="uid://cnlmsdn12ue5w" path="res://characters/character portraits/TransparentBGMatilda.png" id="6_4bvm6"]
 [ext_resource type="Script" uid="uid://drsqvh4lfa4iu" path="res://scenes/ms_kim.gd" id="8_ivenr"]
-[ext_resource type="Texture2D" uid="uid://cgo8mxpr1n72x" path="res://characters/character portraits/groundskeeper full body placeholder.png" id="9_ivenr"]
+[ext_resource type="Texture2D" uid="uid://q8xms7ro35cq" path="res://characters/character portraits/Ms.Kim.png" id="9_ivenr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqkg7"]
 radius = 53.0
@@ -25,6 +25,11 @@ size = Vector2(56, 62)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
 radius = 88.0
 height = 304.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w75vo"]
+shader = ExtResource("4_edguv")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 10.0
 
 [node name="DiningRoom" type="Node2D" unique_id=122451375]
 script = ExtResource("1_4bvm6")
@@ -62,12 +67,13 @@ texture = ExtResource("5_4bvm6")
 script = ExtResource("8_ivenr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ms Kim" unique_id=543392340]
-position = Vector2(832, 447)
+position = Vector2(868, 444)
 shape = SubResource("CapsuleShape2D_8bigk")
 
-[node name="GroundskeeperFullBodyPlaceholder" type="Sprite2D" parent="Ms Kim" unique_id=2034552626]
-position = Vector2(826, 460.00006)
-scale = Vector2(0.2939068, 0.1882622)
+[node name="Ms_kim" type="Sprite2D" parent="Ms Kim" unique_id=1020744597]
+material = SubResource("ShaderMaterial_w75vo")
+position = Vector2(1219, 449.99997)
+scale = Vector2(0.26156515, 0.26156515)
 texture = ExtResource("9_ivenr")
 
 [connection signal="input_event" from="matilda" to="matilda" method="_on_input_event"]

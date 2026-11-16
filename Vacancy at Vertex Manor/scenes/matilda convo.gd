@@ -17,5 +17,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if Dialogic.current_timeline == null:
 			if Dialogic.VAR.matilda.reporter_reveal: 
 				Dialogic.start("matilda no")
-			#sprite.hide()
-			Dialogic.start("matilda convo")
+			elif (Dialogic.VAR.matilda.spoke): 
+				Dialogic.start_timeline("mat2")
+			else:
+				Dialogic.start("matilda convo")

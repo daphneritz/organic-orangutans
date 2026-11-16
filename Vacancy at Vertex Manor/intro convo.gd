@@ -19,4 +19,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			if (Dialogic.VAR.pete.intro==false):
 				Dialogic.start("intro conversation")
 			else: 
-				Dialogic.start_timeline("pete2")
+				Dialogic.start("pete2")

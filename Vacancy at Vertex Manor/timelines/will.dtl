@@ -1,0 +1,4 @@
+join Will left
+set {will.spoke} += 1.0
+Will: Who're you? Why are you talking to me?
+[end_timeline]

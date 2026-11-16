@@ -1,0 +1,17 @@
+extends Area2D
+@onready var sprite = $Wil
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Dialogic.timeline_started.connect(sprite.hide)
+	Dialogic.timeline_ended.connect(sprite.show)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if Dialogic.current_timeline == null:
+			Dialogic.start("will")

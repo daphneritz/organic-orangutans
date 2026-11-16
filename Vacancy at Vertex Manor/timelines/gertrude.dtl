@@ -37,5 +37,8 @@ gertrude: Who on earth are you?
 	gertrude: And the background of that new husband of hers!
 	set {gertrude.matilda} = true
 	gertrude: That's all I've got to say.
+	leave --All--
 	[end_timeline]
 - A third-party witness for the will reading.
+leave --All--
+[end_timeline]
