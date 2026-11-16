@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bpd2mujdqotdh" path="res://scenes/dining room launch.gd" id="4_eibs5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
-size = Vector2(182, 129.5)
+size = Vector2(290, 129.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqkg7"]
 size = Vector2(154.625, 133.25)
@@ -29,7 +29,7 @@ texture = ExtResource("2_kuc3c")
 script = ExtResource("2_jotf0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parlor room" unique_id=1148784741]
-position = Vector2(717, 559.75)
+position = Vector2(663, 559.75)
 shape = SubResource("RectangleShape2D_8bigk")
 
 [node name="dining room" type="Area2D" parent="." unique_id=542589240]

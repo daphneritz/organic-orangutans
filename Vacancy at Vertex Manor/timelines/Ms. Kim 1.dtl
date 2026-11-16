@@ -1,0 +1,53 @@
+"Ms Kim": Oh, hello! Who might you be?
+- A reporter.
+- An old friend of Anthony's.
+"Ms Kim": Well, that's nice, sweetheart.
+"Ms Kim": I'm Ms. Kim. You can call me Ms. Kim.
+- Alright, Ms. Kim.
+"Ms Kim": Did you talk to Matilda?
+if {matilda.spoke} == true:
+	- Yes, I did.
+		if {matilda.reporter_reveal} == true:
+			- She wasn't very nice.
+				"Ms Kim": Ah, she can be prickly. Your best bet is to talk to Will and have him talk to her. She's stubborn, but she'd do anything for her husband.
+				set {matilda.know_will} = true
+		else:
+			- She's interesting.
+				"Ms Kim": She's a character. She knows exactly what she wants and does her darndest to get it!
+	"Ms Kim": Things have been hard for her. First Ant disappearing all those years ago, now Casper, too...
+	"Ms Kim": The years haven't been easy on her.
+	"Ms Kim": And, well... not to be a gossip...
+	- Go on...
+		"Ms Kim": Well, all I heard was that she's not in the will at all. After all those years with Ant, helping raise his son, and not to get a penny? It just seems a shame.
+		"Ms Kim": Ah, but I've said too much! Don't let me keep you here! Plus, I need to get back to my book.
+		- Wait! Before I go...
+			- How do you know Anthony?
+				"Ms Kim": He was my nephew. I lived in this house as a girl... I wanted to come back and see it again. Now, take care!
+				[end_timeline]
+			- Who else should I talk to?
+				"Ms Kim": Gertrude has lived in this house with Casper since Anthony disappeared. She must know a lot about what goes on under its roof. Now, take care!
+				[end_timeline]
+		- Before I go...
+			"Ms Kim": And, well... not to be a gossip...
+			- How do you know Anthony?
+				- 
+				"Ms Kim": He's my nephew. I used to live in this house as a girl and wanted to see it again before it was passed on. Take care!
+				[end_timeline]
+			- Who else should I talk to?
+				"Ms Kim": Gertrude's been living in this house since Anthony disappeared. She might know a thing or two about what's going on under the roof. Take care now!
+				[end_timeline]
+else:
+	- No, I haven't.
+		"Ms Kim": Well, be careful. She's quick to put her hackles up. She doesn't like people prying into her life, especially after the news came poking around after Anthony's disappearence.
+		- Good to know.
+			"Ms Kim": And, well... Not to be a gossip, but...
+			- Go on.
+				"Ms Kim": Well, all I heard was that she's not in the will at all. After all those years with Ant, helping raise his son, and not to get a penny? It just seems a shame.
+				"Ms Kim": Ah, but I've said too much! Don't let me keep you here! Plus, I need to get back to my book.
+				- Wait! Before I go...
+					- How do you know Anthony?
+						"Ms Kim": He was my nephew. I lived in this house as a girl... I wanted to come back and see it again. Now, take care!
+						[end_timeline]
+					- Who else should I talk to?
+						"Ms Kim": Gertrude has lived in this house with Casper since Anthony disappeared. She must know a lot about what goes on under its roof. Now, take care!
+						[end_timeline]

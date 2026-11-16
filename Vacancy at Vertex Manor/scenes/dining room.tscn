@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="5_4bvm6"]
 [ext_resource type="Texture2D" uid="uid://cnlmsdn12ue5w" path="res://characters/character portraits/TransparentBGMatilda.png" id="6_4bvm6"]
 [ext_resource type="Script" uid="uid://cwqwnxjhyge8v" path="res://scenes/gertrude.gd" id="7_edguv"]
+[ext_resource type="Texture2D" uid="uid://cgo8mxpr1n72x" path="res://characters/character portraits/groundskeeper full body placeholder.png" id="9_ivenr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqkg7"]
 radius = 53.0
@@ -63,6 +64,11 @@ script = ExtResource("7_edguv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=543392340]
 position = Vector2(832, 447)
 shape = SubResource("CapsuleShape2D_8bigk")
+
+[node name="GroundskeeperFullBodyPlaceholder" type="Sprite2D" parent="Area2D" unique_id=2034552626]
+position = Vector2(826, 460.00006)
+scale = Vector2(0.2939068, 0.1882622)
+texture = ExtResource("9_ivenr")
 
 [connection signal="input_event" from="matilda" to="matilda" method="_on_input_event"]
 [connection signal="input_event" from="map2" to="map2" method="_on_input_event"]

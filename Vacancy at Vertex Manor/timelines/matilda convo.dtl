@@ -1,6 +1,40 @@
 join matilda left
+set {matilda.spoke} = true
 - Are you Matilda?
 matilda: Yes I am.
 matilda: And...
 matilda: Who would you be?
--
+- I'm a reporter.
+	set {matilda.reporter_reveal} = true
+	matilda: A reporter?!
+	matilda: I don't have anything to say to you!
+	matilda: SCRAM!
+	[end_timeline]
+- An old friend of Anthony's.
+	matilda: You seem a little young to be an "old friend."
+	- I look young for my age.
+		matilda: Hm. Alright.
+		jump reconvene
+	- I knew him when I was eight.
+		matilda: Are you the same age as Casper, then?
+		- Yes! We went to school together.
+			matilda: I see. But you were friends with Anthony...?
+			matilda: Not Casper?
+			matilda: A boy your own age?
+			- I was an eccentric youth.
+				matilda: Hm. Alright.
+				jump reconvene
+label reconvene
+- It's been a while since I've thought about Anthony. Do you mind...
+	- refreshing me on what happened?
+		matilda: He went missing. That's it. Nothing else to say about it.
+		matilda: I think this conversation is over.
+		[end_timeline]
+	- telling me your favorite memory with him?
+		matilda: Oh.
+		matilda: Oh, I suppose I could.
+		matilda: Anthony loved to travel. We would sit in his study together and he would spin his globe. I would point at a spot... we'd make an itinerary. We never had enough time to travel, with Casper being so young...
+		matilda: I did love Anthony. I think people think I didn't, but I did.
+		matilda: Oh, goodness! Why am I telling you this? I don't know you at all! And with Will in the other room!
+		set {matilda.know_will} = true
+		[end_timeline]

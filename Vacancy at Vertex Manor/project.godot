@@ -31,14 +31,18 @@ Gymnopedie="*uid://cf3ap6oa2vaa3"
 [dialogic]
 
 directories/dch_directory={
+"Ms Kim": "res://characters/Ms Kim.dch",
+"Will": "res://characters/Will.dch",
 "gertrude": "res://characters/gertrude.dch",
 "groundskeeper": "res://groundskeeper.dch",
 "matilda": "res://characters/matilda.dch"
 }
 directories/dtl_directory={
+"Ms Kim 1": "res://timelines/Ms. Kim 1.dtl",
 "gertrude": "res://timelines/gertrude.dtl",
 "intro conversation": "res://intro conversation.dtl",
-"matilda convo": "res://timelines/matilda convo.dtl"
+"matilda convo": "res://timelines/matilda convo.dtl",
+"matilda no": "res://timelines/matilda no.dtl"
 }
 layout/style_directory={
 "": "res://characters/character portraits/text style.tres",
@@ -47,6 +51,13 @@ layout/style_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://characters/character portraits/text style.tres"]
 layout/default_style="res://characters/character portraits/text style.tres"
+variables={
+"matilda": {
+"know_will": false,
+"reporter_reveal": false,
+"spoke": false
+}
+}
 
 [display]
 
