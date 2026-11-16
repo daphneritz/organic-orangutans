@@ -1,10 +1,11 @@
 extends Area2D
 
-#@onready var sprite = MatildaPlaceholder
+@onready var matsprite = $TransparentBgMatilda
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Dialogic.timeline_started.connect(matsprite.hide)
+	Dialogic.timeline_ended.connect(matsprite.show)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

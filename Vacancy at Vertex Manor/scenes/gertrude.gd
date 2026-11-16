@@ -1,9 +1,10 @@
 extends Area2D
-
+@onready var sprite = $TransparentBgGurtrude
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Dialogic.timeline_started.connect(sprite.hide)
+	Dialogic.timeline_ended.connect(sprite.show)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,5 +14,4 @@ func _process(delta: float) -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if Dialogic.current_timeline == null:
-			#sprite.hide()
-			Dialogic.start("Ms Kim 1")
+			Dialogic.start("gertrude")
