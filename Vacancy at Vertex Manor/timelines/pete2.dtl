@@ -1,0 +1,9 @@
+join groundskeeper left
+groundskeeper: Have ya found anythin'?
+- A little.
+	groundskeeper: Good. Keep goin'.
+	[end_timeline]
+- Not yet.
+	groundskeeper: Well, what're ya doin' talkin' to me? Get back out there!
+	[end_timeline]
+- I know what happened.

@@ -1,2 +1,41 @@
 join gertrude left
+set {gertrude.spoke} += 1.0
 gertrude: Oh! What are you doing in here?
+- Looking for you.
+	jump who
+- Snooping.
+	gertrude: Ehm. What?
+	- Aren't you also snooping?
+		gertrude: That is PREPOSTEROUS! I would never.
+		- ?
+			gertrude: Well. Maybe I would.
+			- I thought so.
+				gertrude: What are you snooping for?
+				- Casper. I think he's hiding in here.
+					gertrude: He's gone!
+					gertrude: ...I already checked under the bed.
+					- Oh.
+						jump who
+				- A buried chest. I was sent a treasure map in the mail.
+					gertrude: How could there be buried chest on the second floor?
+					- Um... I guess I don't know.
+						jump who
+				- You.
+					gertrude: What?! Why possibly?
+					if {kim.gertrude} == true:
+						- You've lived here for ten years. I thought maybe you could fill me in on some background info.
+							jump who
+					else:
+						- Um. I don't know.
+							jump who
+- What are YOU doing in here?
+label who
+gertrude: Who on earth are you?
+- A reporter.
+	gertrude: Really! Well, here's my statement.
+	gertrude: There's something suspicious about Matilda. Somebody should look into her.
+	gertrude: And the background of that new husband of hers!
+	set {gertrude.matilda} = true
+	gertrude: That's all I've got to say.
+	[end_timeline]
+- A third-party witness for the will reading.

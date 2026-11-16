@@ -1,4 +1,5 @@
 join groundskeeper left
+set {pete.intro} = true
 groundskeeper: Hmm...
 - Hello?
 groundskeeper: You're the journalist?

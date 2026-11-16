@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://oa8yl0rgvil6" path="res://scenes/envelope.gd" id="3_4yyrv"]
 [ext_resource type="Script" uid="uid://cpcwxqo3vbt77" path="res://scenes/letter viewer.gd" id="4_g07rj"]
 [ext_resource type="Texture2D" uid="uid://4cdvrn4kwgv3" path="res://assets/polaroid ant.png" id="5_2mwj1"]
+[ext_resource type="FontFile" uid="uid://dsl26d1748wjy" path="res://assets/SpecialElite-Regular.ttf" id="6_x3tx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(128.5, 220.98769)
@@ -32,6 +33,7 @@ texture = ExtResource("1_8x2uj")
 [node name="Line2D" type="Line2D" parent="." unique_id=1862804566]
 position = Vector2(-1, 2)
 points = PackedVector2Array(864, 335, 1045, 441, 989, 536, 807, 430, 866, 334)
+width = 5.0
 default_color = Color(0.7607843, 0.26666668, 0.3137255, 1)
 script = ExtResource("2_n8nsi")
 
@@ -45,7 +47,6 @@ rotation = -1.0434127
 shape = SubResource("RectangleShape2D_8bigk")
 
 [node name="letter2" type="CanvasLayer" parent="." unique_id=1580486499]
-visible = false
 script = ExtResource("4_g07rj")
 
 [node name="dim" type="ColorRect" parent="letter2" unique_id=2037796793]
@@ -64,10 +65,11 @@ custom_maximum_size = Vector2(1000, 1000)
 layout_mode = 0
 offset_left = 469.0
 offset_top = 173.0
-offset_right = 732.5182
-offset_bottom = 507.36713
+offset_right = 750.322
+offset_bottom = 514.6597
 rotation = -0.04468735
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3tx8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8bigk")
 text = "   
    There will be a will reading
