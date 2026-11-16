@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dskow73iu6w4r" path="res://assets/rooms/doll house (1).jpg" id="2_kuc3c"]
 [ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="3_eibs5"]
 [ext_resource type="Script" uid="uid://bpd2mujdqotdh" path="res://scenes/dining room launch.gd" id="4_eibs5"]
+[ext_resource type="Script" uid="uid://cbtkbaeubvb6" path="res://scenes/bedroomlaunch.gd" id="6_spsmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(290, 129.5)
@@ -88,6 +89,7 @@ position = Vector2(570, 562.25)
 shape = SubResource("RectangleShape2D_wng1g")
 
 [node name="bedroom" type="Area2D" parent="." unique_id=1924874577]
+script = ExtResource("6_spsmk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bedroom" unique_id=1952172816]
 position = Vector2(424.125, 430)
@@ -96,3 +98,4 @@ shape = SubResource("RectangleShape2D_oe1vg")
 [connection signal="input_event" from="parlor room" to="parlor room" method="_on_input_event"]
 [connection signal="input_event" from="dining room" to="parlor room" method="_on_dining_room_input_event"]
 [connection signal="input_event" from="dining room" to="dining room" method="_on_input_event"]
+[connection signal="input_event" from="bedroom" to="bedroom" method="_on_input_event"]

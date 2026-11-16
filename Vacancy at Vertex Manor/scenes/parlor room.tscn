@@ -16,8 +16,8 @@ height = 368.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vum12"]
 shader = ExtResource("4_vum12")
-shader_parameter/outline_color = Color(0.81, 0.81, 0.81, 1)
-shader_parameter/outline_width = 10.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 20.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mqkg7"]
 shader = ExtResource("4_vum12")
