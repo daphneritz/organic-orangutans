@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bnh4woh4wh5s7"]
+
+[ext_resource type="Script" uid="uid://c2uv4wb52smod" path="res://outside music.gd" id="1_n6vtj"]
+[ext_resource type="Texture2D" uid="uid://brm8xun2r488" path="res://assets/rooms/outside of the house (1).jpg" id="1_skvht"]
+[ext_resource type="Script" uid="uid://cv32bmeac5mhw" path="res://outside.gd" id="2_hne82"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
+size = Vector2(1166, 657)
+
+[node name="Node2D" type="Node2D" unique_id=1325597493]
+script = ExtResource("1_n6vtj")
+
+[node name="OutsideOfTheHouse(1)" type="Sprite2D" parent="." unique_id=2091945225]
+position = Vector2(436, 194)
+texture = ExtResource("1_skvht")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1932199514]
+script = ExtResource("2_hne82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=660873367]
+position = Vector2(573, 318.5)
+shape = SubResource("RectangleShape2D_8bigk")
+
+[node name="Fade" type="ColorRect" parent="Area2D" unique_id=192325765]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1154.0
+offset_bottom = 644.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

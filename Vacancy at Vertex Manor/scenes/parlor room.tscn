@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://crvu5cppah64e"]
 
 [ext_resource type="Script" uid="uid://b12ncwaxr58t7" path="res://scripts/parlor_room.gd" id="1_iq5bm"]
-[ext_resource type="Texture2D" uid="uid://b8ciuit3hxobp" path="res://assets/entryway.jpg" id="2_iq5bm"]
+[ext_resource type="Texture2D" uid="uid://bqou511wn7ugj" path="res://assets/rooms/walk in.jpg" id="2_iq5bm"]
 [ext_resource type="Script" uid="uid://b3x4nmhak63ti" path="res://intro convo.gd" id="3_eqopf"]
-[ext_resource type="Texture2D" uid="uid://cgo8mxpr1n72x" path="res://characters/character portraits/groundskeeper full body placeholder.png" id="4_w75vo"]
+[ext_resource type="Texture2D" uid="uid://conkt68u3he06" path="res://characters/character portraits/Pette.png" id="4_iq5bm"]
+[ext_resource type="Shader" uid="uid://db342ld8heen3" path="res://scenes/charshader.gdshader" id="4_vum12"]
 [ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="5_qpbud"]
 [ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="6_gomkn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_turhl"]
-radius = 92.0
-height = 464.0
+radius = 86.0
+height = 368.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vum12"]
+shader = ExtResource("4_vum12")
+shader_parameter/outline_color = Color(0.81, 0.81, 0.81, 1)
+shader_parameter/outline_width = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(63, 66)
@@ -17,22 +23,23 @@ size = Vector2(63, 66)
 [node name="Node2D2" type="Node2D" unique_id=1561387862]
 script = ExtResource("1_iq5bm")
 
-[node name="Entryway" type="Sprite2D" parent="." unique_id=2037554850]
-position = Vector2(578.6625, 320.00003)
-scale = Vector2(0.53999996, 0.53999996)
+[node name="WalkIn" type="Sprite2D" parent="." unique_id=832054468]
+position = Vector2(574.4706, 325.5)
+scale = Vector2(0.62523717, 0.62523717)
 texture = ExtResource("2_iq5bm")
 
 [node name="groundskeeper" type="Area2D" parent="." unique_id=2040328302]
 script = ExtResource("3_eqopf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="groundskeeper" unique_id=651212703]
-position = Vector2(328, 402)
+position = Vector2(328, 453)
 shape = SubResource("CapsuleShape2D_turhl")
 
-[node name="GroundskeeperFullBodyPlaceholder" type="Sprite2D" parent="groundskeeper" unique_id=1974464368]
-position = Vector2(318, 400.00003)
-scale = Vector2(0.32795697, 0.327957)
-texture = ExtResource("4_w75vo")
+[node name="Pette" type="Sprite2D" parent="groundskeeper" unique_id=566554867]
+material = SubResource("ShaderMaterial_vum12")
+position = Vector2(330.99997, 451.00003)
+scale = Vector2(0.24099831, 0.24099833)
+texture = ExtResource("4_iq5bm")
 
 [node name="map" type="Area2D" parent="." unique_id=1091541448]
 script = ExtResource("5_qpbud")

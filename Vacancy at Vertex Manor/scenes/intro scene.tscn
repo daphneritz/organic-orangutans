@@ -1,14 +1,26 @@
 [gd_scene format=3 uid="uid://cg1n3k1gnver8"]
 
 [ext_resource type="Texture2D" uid="uid://d0b5rd4u8waqh" path="res://assets/Screenshot 2026-11-04 113156.png" id="1_8x2uj"]
+[ext_resource type="Script" uid="uid://gns8csheqyhp" path="res://scenes/intro_scene.gd" id="1_u7rak"]
+[ext_resource type="Script" uid="uid://fs0076lmpdcf" path="res://scenes/line color.gd" id="2_n8nsi"]
+[ext_resource type="Script" uid="uid://oa8yl0rgvil6" path="res://scenes/envelope.gd" id="3_4yyrv"]
+[ext_resource type="Script" uid="uid://cpcwxqo3vbt77" path="res://scenes/letter viewer.gd" id="4_g07rj"]
+[ext_resource type="Texture2D" uid="uid://4cdvrn4kwgv3" path="res://assets/polaroid ant.png" id="5_2mwj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
+size = Vector2(128.5, 220.98769)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bigk"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Node2D2" type="Node2D" unique_id=305958757]
+script = ExtResource("1_u7rak")
 
 [node name="Label" type="Label" parent="." unique_id=399206618]
-offset_left = 1429.0
-offset_top = 162.0
-offset_right = 2379.0
-offset_bottom = 237.0
+offset_left = 106.0
+offset_top = 752.0
+offset_right = 1056.0
+offset_bottom = 827.0
 text = "we want you to attend this will reading and report on it thanks champ much appreciated --> pan to manor outside --> click to approach and enter --> knock on door? --> move to entryway --> talk to groundskeeper --> move to map and dollhouse view "
 autowrap_mode = 2
 
@@ -16,3 +28,79 @@ autowrap_mode = 2
 position = Vector2(576, 323.00003)
 scale = Vector2(0.6333333, 0.6333333)
 texture = ExtResource("1_8x2uj")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1862804566]
+position = Vector2(-1, 2)
+points = PackedVector2Array(864, 335, 1045, 441, 989, 536, 807, 430, 866, 334)
+default_color = Color(0.7607843, 0.26666668, 0.3137255, 1)
+script = ExtResource("2_n8nsi")
+
+[node name="letter" type="Area2D" parent="." unique_id=1646182818 node_paths=PackedStringArray("viewer")]
+script = ExtResource("3_4yyrv")
+viewer = NodePath("../letter2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="letter" unique_id=1477273826]
+position = Vector2(925.031, 439.66367)
+rotation = -1.0434127
+shape = SubResource("RectangleShape2D_8bigk")
+
+[node name="letter2" type="CanvasLayer" parent="." unique_id=1580486499]
+visible = false
+script = ExtResource("4_g07rj")
+
+[node name="dim" type="ColorRect" parent="letter2" unique_id=2037796793]
+offset_right = 1150.0
+offset_bottom = 645.0
+color = Color(0, 0, 0, 0.3647059)
+
+[node name="Pages" type="Control" parent="letter2" unique_id=1306578872]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="letter2/Pages" unique_id=1323404607]
+custom_maximum_size = Vector2(1000, 1000)
+layout_mode = 0
+offset_left = 469.0
+offset_top = 173.0
+offset_right = 732.5182
+offset_bottom = 507.36713
+rotation = -0.04468735
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8bigk")
+text = "   
+   There will be a will reading
+   at Vertex Manor tomorrow. 
+   Check it out, will you? It
+   should be a pretty boring 
+   affair. Anthony Gon's estate...
+   everything's probably going to
+   his kid, Casper. 
+   Perfect for your first 
+   solo assignment! 
+   Thanks. 
+                  - G.N."
+autowrap_mode = 2
+max_lines_visible = 13
+visible_characters = 1000
+visible_ratio = 3.3333333
+
+[node name="TextureRect" type="TextureRect" parent="letter2/Pages" unique_id=37258225]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 181.0
+offset_right = 764.0
+offset_bottom = 409.0897
+rotation = 0.12387514
+texture = ExtResource("5_2mwj1")
+expand_mode = 1
+
+[node name="Fade" type="ColorRect" parent="letter2" unique_id=1297797891]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1153.0
+offset_bottom = 655.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.98039216)
+
+[connection signal="input_event" from="letter" to="letter" method="_on_input_event"]

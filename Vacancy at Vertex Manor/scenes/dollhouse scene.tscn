@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d16ca34o72ii5" path="res://scenes/dollhouse_scene.gd" id="1_kuc3c"]
 [ext_resource type="Script" uid="uid://dnutdexa8aljs" path="res://scenes/parlor room launch.gd" id="2_jotf0"]
-[ext_resource type="Texture2D" uid="uid://dwjubd2pawobg" path="res://assets/Untitled-3.jpg" id="2_kuc3c"]
+[ext_resource type="Texture2D" uid="uid://dskow73iu6w4r" path="res://assets/rooms/doll house (1).jpg" id="2_kuc3c"]
 [ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="3_eibs5"]
 [ext_resource type="Script" uid="uid://bpd2mujdqotdh" path="res://scenes/dining room launch.gd" id="4_eibs5"]
 
@@ -12,17 +12,17 @@ size = Vector2(182, 129.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqkg7"]
 size = Vector2(154.625, 133.25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wng1g"]
+size = Vector2(108, 130.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe1vg"]
+size = Vector2(153.75, 106.5)
+
 [node name="Node2D" type="Node2D" unique_id=1067673544]
 script = ExtResource("1_kuc3c")
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=123762661]
-position = Vector2(-12, -6)
-scale = Vector2(1.0181347, 1.0474006)
-polygon = PackedVector2Array(-1, -3, 1156, 1, 1154, 651, -2, 648)
-
-[node name="Untitled3" type="Sprite2D" parent="." unique_id=1064360483]
-position = Vector2(576, 326)
-scale = Vector2(0.9847973, 0.98479724)
+[node name="DollHouse(1)" type="Sprite2D" parent="." unique_id=137929640]
+position = Vector2(574, 322)
 texture = ExtResource("2_kuc3c")
 
 [node name="parlor room" type="Area2D" parent="." unique_id=1477262737]
@@ -47,7 +47,7 @@ offset_bottom = 612.0
 theme = ExtResource("3_eibs5")
 theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
 theme_override_font_sizes/font_size = 25
-text = "dining room"
+text = "living room"
 
 [node name="Label" type="Label" parent="." unique_id=1217487665]
 offset_left = 670.0
@@ -58,6 +58,40 @@ theme = ExtResource("3_eibs5")
 theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
 theme_override_font_sizes/font_size = 25
 text = "parlor room"
+
+[node name="Label3" type="Label" parent="." unique_id=854567179]
+offset_left = 527.0
+offset_top = 507.0
+offset_right = 696.0
+offset_bottom = 562.0
+theme = ExtResource("3_eibs5")
+theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
+theme_override_font_sizes/font_size = 25
+text = "entry
+"
+
+[node name="Label4" type="Label" parent="." unique_id=1964386134]
+offset_left = 372.0
+offset_top = 446.0
+offset_right = 509.0
+offset_bottom = 501.0
+theme = ExtResource("3_eibs5")
+theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
+theme_override_font_sizes/font_size = 25
+text = "bedroom
+"
+
+[node name="entryway" type="Area2D" parent="." unique_id=1557091196]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entryway" unique_id=1637801761]
+position = Vector2(570, 562.25)
+shape = SubResource("RectangleShape2D_wng1g")
+
+[node name="bedroom" type="Area2D" parent="." unique_id=1924874577]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bedroom" unique_id=1952172816]
+position = Vector2(424.125, 430)
+shape = SubResource("RectangleShape2D_oe1vg")
 
 [connection signal="input_event" from="parlor room" to="parlor room" method="_on_input_event"]
 [connection signal="input_event" from="dining room" to="parlor room" method="_on_dining_room_input_event"]

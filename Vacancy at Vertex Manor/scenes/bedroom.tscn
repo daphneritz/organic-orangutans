@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b3sulhvvtsdm4"]
+
+[ext_resource type="Script" uid="uid://b3sorn367rqsu" path="res://scenes/dining_room.gd" id="1_xunnl"]
+[ext_resource type="Texture2D" uid="uid://ljmcf65e62ek" path="res://assets/rooms/bed room.jpg" id="2_xunnl"]
+[ext_resource type="Script" uid="uid://lxoilw1wu01u" path="res://scenes/matilda convo.gd" id="3_hdjrh"]
+[ext_resource type="Texture2D" uid="uid://cnlmsdn12ue5w" path="res://characters/character portraits/TransparentBGMatilda.png" id="4_lj4hb"]
+[ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="5_lv7wv"]
+[ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="6_k5fq4"]
+[ext_resource type="Script" uid="uid://cwqwnxjhyge8v" path="res://scenes/gertrude.gd" id="7_4wfg3"]
+[ext_resource type="Texture2D" uid="uid://cjaw0uraiannw" path="res://characters/character portraits/TransparentBGGurtrude.png" id="8_mk2nf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqkg7"]
+radius = 53.0
+height = 440.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05e24"]
+size = Vector2(56, 62)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
+radius = 88.0
+height = 304.0
+
+[node name="DiningRoom" type="Node2D" unique_id=122451375]
+script = ExtResource("1_xunnl")
+
+[node name="BedRoom" type="Sprite2D" parent="." unique_id=851777131]
+position = Vector2(571, 326)
+scale = Vector2(0.9872557, 1)
+texture = ExtResource("2_xunnl")
+
+[node name="matilda" type="Area2D" parent="." unique_id=836587767]
+script = ExtResource("3_hdjrh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="matilda" unique_id=1332463424]
+position = Vector2(245, 373)
+shape = SubResource("CapsuleShape2D_mqkg7")
+
+[node name="TransparentBgMatilda" type="Sprite2D" parent="matilda" unique_id=599432135]
+position = Vector2(280.99997, 380)
+scale = Vector2(1.0572288, 1.0572288)
+texture = ExtResource("4_lj4hb")
+
+[node name="map2" type="Area2D" parent="." unique_id=1228863502]
+script = ExtResource("5_lv7wv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map2" unique_id=1578665786]
+position = Vector2(54, 594)
+shape = SubResource("RectangleShape2D_05e24")
+
+[node name="Map" type="Sprite2D" parent="map2" unique_id=2024152769]
+position = Vector2(55.000008, 593.00006)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("6_k5fq4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=699408890]
+script = ExtResource("7_4wfg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=543392340]
+position = Vector2(832, 447)
+shape = SubResource("CapsuleShape2D_8bigk")
+
+[node name="TransparentBgGurtrude" type="Sprite2D" parent="Area2D" unique_id=1953756]
+position = Vector2(838.63995, 433.5075)
+rotation = 0.10785241
+scale = Vector2(1.1106672, 1.1106671)
+texture = ExtResource("8_mk2nf")
+
+[connection signal="input_event" from="matilda" to="matilda" method="_on_input_event"]
+[connection signal="input_event" from="map2" to="map2" method="_on_input_event"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
