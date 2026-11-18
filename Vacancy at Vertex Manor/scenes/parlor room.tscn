@@ -78,4 +78,5 @@ scale = Vector2(0.6875, 0.6875)
 texture = ExtResource("6_gomkn")
 
 [connection signal="input_event" from="groundskeeper" to="groundskeeper" method="_on_input_event"]
+[connection signal="input_event" from="will" to="will" method="_on_input_event"]
 [connection signal="input_event" from="map" to="." method="_on_map_input_event"]

@@ -7,7 +7,7 @@ set {kim.spoke} += 1.0
 "Ms Kim": I'm Ms. Kim. You can call me Ms. Kim.
 - Alright, Ms. Kim.
 "Ms Kim": Did you talk to Matilda?
-if {matilda.spoke} == true:
+if {matilda.spoke} > 0.0:
 	- Yes, I did.
 		if {matilda.reporter_reveal} == true:
 			- She wasn't very nice.
