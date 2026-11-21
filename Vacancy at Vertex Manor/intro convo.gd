@@ -16,7 +16,4 @@ func _process(delta: float) -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if Dialogic.current_timeline == null:
-			if (Dialogic.VAR.pete.intro==false):
-				Dialogic.start("intro conversation")
-			else: 
-				Dialogic.start("pete2")
+			Dialogic.start("pete2")

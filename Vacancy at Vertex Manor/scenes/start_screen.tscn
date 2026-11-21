@@ -55,7 +55,7 @@ Button/styles/hover = SubResource("StyleBoxFlat_hm208")
 Button/styles/normal = SubResource("StyleBoxFlat_hm208")
 Button/styles/pressed = SubResource("StyleBoxFlat_5pab1")
 
-[node name="Node2D" type="Node2D" unique_id=47258664]
+[node name="Node2D2" type="Node2D" unique_id=47258664]
 script = ExtResource("1_5pab1")
 
 [node name="start" type="Button" parent="." unique_id=1226803113]
@@ -78,7 +78,7 @@ text = "Settings"
 script = ExtResource("7_o30b1")
 
 [node name="FinishedStartPage[recovered]" type="Sprite2D" parent="." unique_id=848259019]
-position = Vector2(583.8216, 208.87502)
+position = Vector2(578.8216, 213.87502)
 scale = Vector2(0.24162053, 0.24162048)
 texture = ExtResource("2_5pab1")
 

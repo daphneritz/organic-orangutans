@@ -2,20 +2,15 @@
 
 [ext_resource type="Script" uid="uid://d16ca34o72ii5" path="res://scenes/dollhouse_scene.gd" id="1_kuc3c"]
 [ext_resource type="Script" uid="uid://dnutdexa8aljs" path="res://scenes/parlor room launch.gd" id="2_jotf0"]
-[ext_resource type="Theme" uid="uid://d3d6ncs3w730i" path="res://Titles.tres" id="3_eibs5"]
 [ext_resource type="Script" uid="uid://bpd2mujdqotdh" path="res://scenes/dining room launch.gd" id="4_eibs5"]
 [ext_resource type="Texture2D" uid="uid://lx8ot3o73exs" path="res://assets/updated rooms/doll house (1).jpg" id="6_5u1x5"]
-[ext_resource type="FontFile" uid="uid://dsl26d1748wjy" path="res://assets/SpecialElite-Regular.ttf" id="6_643ye"]
 [ext_resource type="Script" uid="uid://cbtkbaeubvb6" path="res://scenes/bedroomlaunch.gd" id="6_spsmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
-size = Vector2(290, 129.5)
+size = Vector2(115, 129.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqkg7"]
 size = Vector2(154.625, 133.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wng1g"]
-size = Vector2(108, 130.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oe1vg"]
 size = Vector2(153.75, 106.5)
@@ -32,59 +27,23 @@ texture = ExtResource("6_5u1x5")
 script = ExtResource("2_jotf0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parlor room" unique_id=1148784741]
-position = Vector2(663, 559.75)
+visible = false
+position = Vector2(575.5, 559.75)
 shape = SubResource("RectangleShape2D_8bigk")
 
 [node name="dining room" type="Area2D" parent="." unique_id=542589240]
 script = ExtResource("4_eibs5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dining room" unique_id=1613612337]
+visible = false
 position = Vector2(427.6875, 564.375)
 shape = SubResource("RectangleShape2D_mqkg7")
-
-[node name="Label2" type="Label" parent="." unique_id=1433008392]
-offset_left = 375.0
-offset_top = 700.0
-offset_right = 547.0
-offset_bottom = 740.0
-theme = ExtResource("3_eibs5")
-theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
-theme_override_fonts/font = ExtResource("6_643ye")
-theme_override_font_sizes/font_size = 25
-text = "living room"
-
-[node name="Label3" type="Label" parent="." unique_id=854567179]
-offset_left = 527.0
-offset_top = 507.0
-offset_right = 696.0
-offset_bottom = 562.0
-theme = ExtResource("3_eibs5")
-theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
-theme_override_font_sizes/font_size = 25
-text = "entry
-"
-
-[node name="Label4" type="Label" parent="." unique_id=1964386134]
-offset_left = 372.0
-offset_top = 446.0
-offset_right = 509.0
-offset_bottom = 501.0
-theme = ExtResource("3_eibs5")
-theme_override_colors/font_color = Color(0.6, 0.360784, 0.423529, 1)
-theme_override_font_sizes/font_size = 25
-text = "bedroom
-"
-
-[node name="entryway" type="Area2D" parent="." unique_id=1557091196]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entryway" unique_id=1637801761]
-position = Vector2(570, 562.25)
-shape = SubResource("RectangleShape2D_wng1g")
 
 [node name="bedroom" type="Area2D" parent="." unique_id=1924874577]
 script = ExtResource("6_spsmk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bedroom" unique_id=1952172816]
+visible = false
 position = Vector2(424.125, 430)
 shape = SubResource("RectangleShape2D_oe1vg")
 

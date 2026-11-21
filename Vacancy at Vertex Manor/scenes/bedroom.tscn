@@ -3,18 +3,12 @@
 [ext_resource type="Script" uid="uid://b3sorn367rqsu" path="res://scenes/dining_room.gd" id="1_xunnl"]
 [ext_resource type="Texture2D" uid="uid://d2xfdmd1jnko" path="res://assets/updated rooms/bed room (1).png" id="2_tjgix"]
 [ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="5_lv7wv"]
-[ext_resource type="Texture2D" uid="uid://bbo2gm80e4by0" path="res://assets/map.jpg" id="6_k5fq4"]
 [ext_resource type="Script" uid="uid://cwqwnxjhyge8v" path="res://scenes/gertrude.gd" id="7_4wfg3"]
-[ext_resource type="Shader" uid="uid://db342ld8heen3" path="res://scenes/charshader.gdshader" id="8_0w1sy"]
+[ext_resource type="Texture2D" uid="uid://c7u8kq528nj75" path="res://assets/treasure-map red.png" id="7_tjgix"]
 [ext_resource type="Texture2D" uid="uid://cjaw0uraiannw" path="res://characters/character portraits/TransparentBGGurtrude.png" id="8_mk2nf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05e24"]
-size = Vector2(56, 62)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kuc3c"]
-shader = ExtResource("8_0w1sy")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_width = 3.394000161215
+size = Vector2(83, 62)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
 radius = 88.0
@@ -31,25 +25,25 @@ texture = ExtResource("2_tjgix")
 script = ExtResource("5_lv7wv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map2" unique_id=1578665786]
-position = Vector2(54, 594)
+position = Vector2(67.5, 594)
 shape = SubResource("RectangleShape2D_05e24")
 
-[node name="Map" type="Sprite2D" parent="map2" unique_id=2024152769]
-position = Vector2(55.000008, 593.00006)
-scale = Vector2(0.6875, 0.6875)
-texture = ExtResource("6_k5fq4")
+[node name="TreasureMapRed" type="Sprite2D" parent="map2" unique_id=1479769628]
+position = Vector2(70, 594.00006)
+scale = Vector2(0.16015625, 0.16015625)
+texture = ExtResource("7_tjgix")
 
 [node name="Gertrude" type="Area2D" parent="." unique_id=699408890]
 script = ExtResource("7_4wfg3")
 
 [node name="TransparentBgGurtrude" type="Sprite2D" parent="Gertrude" unique_id=1953756]
-material = SubResource("ShaderMaterial_kuc3c")
 position = Vector2(838.63995, 433.5075)
 rotation = 0.10785241
 scale = Vector2(1.1106672, 1.1106671)
 texture = ExtResource("8_mk2nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gertrude" unique_id=543392340]
+visible = false
 position = Vector2(832, 447)
 scale = Vector2(1, 0.99999994)
 shape = SubResource("CapsuleShape2D_8bigk")
