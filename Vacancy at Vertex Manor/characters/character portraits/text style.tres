@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="6_juul2"]
 [ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="7_ul88h"]
 [ext_resource type="PackedScene" uid="uid://cjr2t4ngt1k00" path="res://CenteredChoices/custom_centered_choices.tscn" id="8_62tul"]
-[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="9_6p0je"]
+[ext_resource type="PackedScene" uid="uid://b38erdg5spq8y" path="res://SimpleTextInputBox/custom_simple_text_input_box.tscn" id="9_62tul"]
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="10_h84xq"]
 [ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="11_2bg88"]
 
@@ -31,6 +31,15 @@ scene = ExtResource("5_g6xor")
 [sub_resource type="Resource" id="Resource_woq4i"]
 script = ExtResource("2_6u487")
 scene = ExtResource("6_juul2")
+overrides = {
+"name_label_custom_font_size": "24.0",
+"name_label_font": "\"res://assets/Apollo MT Std Regular.otf\"",
+"name_label_use_global_font": "false",
+"normal_font": "\"res://assets/Apollo MT Std Regular.otf\"",
+"text_size": "22.0",
+"text_use_global_font": "false",
+"text_use_global_size": "false"
+}
 
 [sub_resource type="Resource" id="Resource_qouxs"]
 script = ExtResource("2_6u487")
@@ -39,10 +48,16 @@ scene = ExtResource("7_ul88h")
 [sub_resource type="Resource" id="Resource_t18ou"]
 script = ExtResource("2_6u487")
 scene = ExtResource("8_62tul")
+overrides = {
+"font_custom": "\"res://assets/Apollo MT Std Regular.otf\"",
+"font_size_custom": "22.0",
+"font_size_use_global": "false",
+"font_use_global": "false"
+}
 
 [sub_resource type="Resource" id="Resource_ttxhu"]
 script = ExtResource("2_6u487")
-scene = ExtResource("9_6p0je")
+scene = ExtResource("9_62tul")
 
 [sub_resource type="Resource" id="Resource_oldrb"]
 script = ExtResource("2_6u487")
@@ -63,4 +78,4 @@ layer_info = {
 "16": SubResource("Resource_ttxhu"),
 "17": SubResource("Resource_oldrb")
 }
-metadata/_latest_layer = "11"
+metadata/_latest_layer = "15"
