@@ -83,10 +83,10 @@ scale = Vector2(0.24162053, 0.24162048)
 texture = ExtResource("2_5pab1")
 
 [node name="Label" type="Label" parent="." unique_id=927372009]
-offset_left = 464.0
-offset_top = 102.0
-offset_right = 708.0
-offset_bottom = 163.0
+offset_left = 335.0
+offset_top = 112.0
+offset_right = 579.0
+offset_bottom = 173.0
 theme = ExtResource("2_b3i6q")
 theme_override_font_sizes/font_size = 60
 text = "Vacancy at"
