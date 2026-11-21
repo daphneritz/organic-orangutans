@@ -1,4 +1,4 @@
-[background arg="res://assets/rooms/walk in.jpg" fade="0.0"]
+[background arg="res://assets/updated rooms/walk in  (1).jpg" fade="0.0"]
 join groundskeeper left
 set {pete.intro} = true
 groundskeeper: Hmm...

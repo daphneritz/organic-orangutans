@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crvu5cppah64e"]
 
 [ext_resource type="Script" uid="uid://b12ncwaxr58t7" path="res://scripts/parlor_room.gd" id="1_iq5bm"]
-[ext_resource type="Texture2D" uid="uid://bqou511wn7ugj" path="res://assets/rooms/walk in.jpg" id="2_iq5bm"]
+[ext_resource type="Texture2D" uid="uid://dei5hcdtl7gkr" path="res://assets/updated rooms/walk in  (1).jpg" id="2_eqopf"]
 [ext_resource type="Script" uid="uid://b3x4nmhak63ti" path="res://intro convo.gd" id="3_eqopf"]
 [ext_resource type="Texture2D" uid="uid://conkt68u3he06" path="res://characters/character portraits/Pette.png" id="4_iq5bm"]
 [ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="5_qpbud"]
@@ -23,21 +23,20 @@ size = Vector2(81, 66)
 [node name="Node2D2" type="Node2D" unique_id=1561387862]
 script = ExtResource("1_iq5bm")
 
-[node name="WalkIn" type="Sprite2D" parent="." unique_id=832054468]
-position = Vector2(574.4706, 325.5)
-scale = Vector2(0.62523717, 0.62523717)
-texture = ExtResource("2_iq5bm")
+[node name="WalkIn(1)" type="Sprite2D" parent="." unique_id=282144140]
+position = Vector2(577.2363, 328)
+scale = Vector2(1.0091465, 1.0091463)
+texture = ExtResource("2_eqopf")
 
 [node name="groundskeeper" type="Area2D" parent="." unique_id=2040328302]
 script = ExtResource("3_eqopf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="groundskeeper" unique_id=651212703]
-visible = false
-position = Vector2(262, 470)
+position = Vector2(286, 460)
 shape = SubResource("CapsuleShape2D_turhl")
 
 [node name="Pette" type="Sprite2D" parent="groundskeeper" unique_id=566554867]
-position = Vector2(251, 457)
+position = Vector2(288.99997, 457)
 scale = Vector2(0.24099831, 0.24099833)
 texture = ExtResource("4_iq5bm")
 
