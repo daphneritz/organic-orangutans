@@ -1,4 +1,67 @@
 join Will left
 set {will.spoke} += 1.0
-Will: Who're you? Why are you talking to me?
+Will: Hello! How are you?
+- I'm well.
+	if {kim.will} == true:
+		- Are you Will?
+			Will: Yes I am! It's a pleasure to make your acquaintance.
+			- You as well.
+				- I have a favor to ask of you.
+					Will: Anything!
+					- I talked to Matilda earlier.
+						- She wasn't pleased to hear I'm a reporter.
+							- Can you talk some sense into her and get her to talk to me again?
+								Will: Don't talk about my Matilda like that! This conversation is over. You're not very kind, you know that?
+							- Would you let her know I'm not here to write a nonsense story about her?
+								Will: Ah! After Anthony, her ex-husband, went missing, people tried digging into her life. They thought maybe she had something to do with it.
+								Will: Obviously, she didn't!
+								Will: What are you here to write about?
+								- An architecture piece on the manor.
+									Will: I'll talk to her. It was a pleasure to chat with you!
+									[end_timeline]
+								- A nonsense piece on Casper
+									Will: Well... maybe it's best she doesn't talk to you, then.
+									Will: Enjoy the rest of your evening...
+									[end_timeline]
+	elif {matilda.know_will} == true:
+		- Are you Will?
+			Will: Yes I am! It's a pleasure to make your acquaintance.
+			- You're Matilda's...?
+				Will: Husband! It's the only reason I'm here. I don't know any of these people.
+				jump people
+	elif {gertrude.will} == true:
+		- Are you Will?
+			Will: Yes I am! It's a pleasure to make your acquaintance.
+			- You as well.
+				- You're Matilda's husband?
+					Will: Yes I am!
+					- What do you do for work?
+						Will: I opened a bookstore two years ago and I've been running it since!
+						- What did you do before that?
+							Will: Oh.
+							Will: Did somebody say something?
+							- No...
+								Will: Well, I used to be a fighter. But I don't do that anymore.
+								- I see.
+									Will: This conversation has made me sad. I want to go talk to my wife.
+									[end_timeline]
+							- Gertrude...
+								Will: Figures. I used to be a fighter. But I don't do that anymore.
+								- I see.
+									Will: This conversation has made me sad. I want to go talk to my wife.
+									[end_timeline]
+	else:
+		- Who are you?
+			Will: I'm Will! I don't know any of these people. I just came to support Matilda. It's a nice evening, isn't it?
+			label people
+			- I don't know any of these people either.
+				- Can you give me a rundown on who's here?
+					Will: Hmm... Well, Matilda is Anthony's ex-wife.
+					Will: She was summoned for the will reading. After Will disappeared and it turned out that custody of Casper was going to Gertrude and not her, she left this house and didn't come back.
+					Will: Gertrude was a teacher of Anthony's. She practically raised him. Casper too, now.
+					Will: Ms. Kim is Anthony's aunt. I'm not sure why she's here, to be honest.
+					Will: Pete's the groundskeeper. He's worked here forever.
+					- Wow, that was really helpful.
+						Will: I'm glad! Nice chatting.
+						[end_timeline]
 [end_timeline]

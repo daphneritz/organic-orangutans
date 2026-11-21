@@ -29,16 +29,24 @@ gertrude: Oh! What are you doing in here?
 						- Um. I don't know.
 							jump who
 - What are YOU doing in here?
+	jump who
 label who
 gertrude: Who on earth are you?
 - A reporter.
 	gertrude: Really! Well, here's my statement.
 	gertrude: There's something suspicious about Matilda. Somebody should look into her.
 	gertrude: And the background of that new husband of hers!
+	set {gertrude.will} = true
 	set {gertrude.matilda} = true
 	gertrude: That's all I've got to say.
 	leave --All--
 	[end_timeline]
 - A third-party witness for the will reading.
+	gertrude: Well, I'm not sure how the will reading can go on without Casper here. It's a real shame. I wonder who they'll put in charge of the estate while they're both missing.
+	- Who would be in the running?
+		gertrude: Well, I've been living here and taking care of Casper here for 10 years, so...
+		- I see.
+			gertrude: Actually, I don't have time to be talking to you. Goodbye.
+			[end_timeline]
 leave --All--
 [end_timeline]

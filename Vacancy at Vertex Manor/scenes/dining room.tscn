@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://b3sorn367rqsu" path="res://scenes/dining_room.gd" id="1_4bvm6"]
 [ext_resource type="Script" uid="uid://lxoilw1wu01u" path="res://scenes/matilda convo.gd" id="2_144f0"]
 [ext_resource type="Texture2D" uid="uid://cjkelsd5r6cok" path="res://assets/updated rooms/living room  (1).jpg" id="2_ivenr"]
+[ext_resource type="Texture2D" uid="uid://cru3x7qtftmtt" path="res://assets/NEWMatilda.png" id="4_edguv"]
 [ext_resource type="Script" uid="uid://ertxo1kcixd" path="res://scenes/map_ret.gd" id="4_hk0ip"]
-[ext_resource type="Texture2D" uid="uid://cnlmsdn12ue5w" path="res://characters/character portraits/TransparentBGMatilda.png" id="6_4bvm6"]
-[ext_resource type="Texture2D" uid="uid://c7u8kq528nj75" path="res://assets/treasure-map red.png" id="6_edguv"]
+[ext_resource type="Texture2D" uid="uid://dglaxs0ppleve" path="res://assets/icons/MapIconFinished.png" id="6_edguv"]
 [ext_resource type="Script" uid="uid://drsqvh4lfa4iu" path="res://scenes/ms_kim.gd" id="8_ivenr"]
 [ext_resource type="Texture2D" uid="uid://q8xms7ro35cq" path="res://characters/character portraits/Ms.Kim.png" id="9_ivenr"]
 
@@ -14,7 +14,7 @@ radius = 47.0
 height = 378.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05e24"]
-size = Vector2(56, 62)
+size = Vector2(98, 62)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
 radius = 88.0
@@ -34,23 +34,22 @@ script = ExtResource("2_144f0")
 position = Vector2(320, 430)
 shape = SubResource("CapsuleShape2D_mqkg7")
 
-[node name="TransparentBgMatilda" type="Sprite2D" parent="matilda" unique_id=599432135]
-position = Vector2(356, 430.00003)
-scale = Vector2(0.920181, 0.92018104)
-texture = ExtResource("6_4bvm6")
+[node name="NewMatilda" type="Sprite2D" parent="matilda" unique_id=30307532]
+position = Vector2(357, 430.99997)
+scale = Vector2(0.22334419, 0.22334419)
+texture = ExtResource("4_edguv")
 
 [node name="map2" type="Area2D" parent="." unique_id=1228863502]
 script = ExtResource("4_hk0ip")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map2" unique_id=1578665786]
-visible = false
-position = Vector2(55, 589)
-shape = SubResource("RectangleShape2D_05e24")
-
-[node name="TreasureMapRed" type="Sprite2D" parent="map2" unique_id=674003649]
-position = Vector2(59.000008, 592)
-scale = Vector2(0.16992188, 0.16992188)
+[node name="MapIconFinished" type="Sprite2D" parent="map2" unique_id=463328464]
+position = Vector2(76, 592)
+scale = Vector2(0.04650315, 0.04650315)
 texture = ExtResource("6_edguv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map2" unique_id=1578665786]
+position = Vector2(76, 589)
+shape = SubResource("RectangleShape2D_05e24")
 
 [node name="Ms Kim" type="Area2D" parent="." unique_id=699408890]
 script = ExtResource("8_ivenr")

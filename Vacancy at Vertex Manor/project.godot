@@ -72,11 +72,13 @@ layout/default_style="res://characters/character portraits/text style.tres"
 variables={
 "gertrude": {
 "matilda": false,
-"spoke": 0
+"spoke": 0,
+"will": false
 },
 "kim": {
 "gertrude": false,
-"spoke": 0
+"spoke": 0,
+"will": false
 },
 "matilda": {
 "know_will": false,

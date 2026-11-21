@@ -12,7 +12,7 @@ if {matilda.spoke} > 0.0:
 		if {matilda.reporter_reveal} == true:
 			- She wasn't very nice.
 				"Ms Kim": Ah, she can be prickly. Your best bet is to talk to Will and have him talk to her. She's stubborn, but she'd do anything for her husband.
-				set {matilda.know_will} = true
+				set {kim.will} = true
 		else:
 			- She's interesting.
 				"Ms Kim": She's a character. She knows exactly what she wants and does her darndest to get it!
