@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://cg1n3k1gnver8"]
 
-[ext_resource type="Texture2D" uid="uid://d0b5rd4u8waqh" path="res://assets/Screenshot 2026-11-04 113156.png" id="1_8x2uj"]
 [ext_resource type="Script" uid="uid://gns8csheqyhp" path="res://scenes/intro_scene.gd" id="1_u7rak"]
-[ext_resource type="Script" uid="uid://fs0076lmpdcf" path="res://scenes/line color.gd" id="2_n8nsi"]
+[ext_resource type="Texture2D" uid="uid://b0u60tcgqr2pt" path="res://assets/updated rooms/FinalProlouge!.jpg" id="2_u7rak"]
 [ext_resource type="Script" uid="uid://oa8yl0rgvil6" path="res://scenes/envelope.gd" id="3_4yyrv"]
 [ext_resource type="Script" uid="uid://cpcwxqo3vbt77" path="res://scenes/letter viewer.gd" id="4_g07rj"]
 [ext_resource type="Texture2D" uid="uid://4cdvrn4kwgv3" path="res://assets/polaroid ant.png" id="5_2mwj1"]
 [ext_resource type="FontFile" uid="uid://dsl26d1748wjy" path="res://assets/SpecialElite-Regular.ttf" id="6_x3tx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
-size = Vector2(128.5, 220.98769)
+size = Vector2(241.72827, 433.66748)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bigk"]
 bg_color = Color(1, 1, 1, 1)
@@ -17,25 +16,19 @@ bg_color = Color(1, 1, 1, 1)
 [node name="Node2D2" type="Node2D" unique_id=305958757]
 script = ExtResource("1_u7rak")
 
-[node name="Screenshot20261104113156" type="Sprite2D" parent="." unique_id=1834766771]
-position = Vector2(576, 323.00003)
-scale = Vector2(0.6333333, 0.6333333)
-texture = ExtResource("1_8x2uj")
-
-[node name="Line2D" type="Line2D" parent="." unique_id=1862804566]
-position = Vector2(-1, 2)
-points = PackedVector2Array(864, 335, 1045, 441, 989, 536, 807, 430, 866, 334)
-width = 5.0
-default_color = Color(0.7607843, 0.26666668, 0.3137255, 1)
-script = ExtResource("2_n8nsi")
+[node name="FinalProlouge!" type="Sprite2D" parent="." unique_id=984011715]
+position = Vector2(576.3301, 325.5)
+scale = Vector2(0.23962964, 0.23962964)
+texture = ExtResource("2_u7rak")
 
 [node name="letter" type="Area2D" parent="." unique_id=1646182818 node_paths=PackedStringArray("viewer")]
 script = ExtResource("3_4yyrv")
 viewer = NodePath("../letter2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="letter" unique_id=1477273826]
-position = Vector2(925.031, 439.66367)
-rotation = -1.0434127
+position = Vector2(568, 279)
+rotation = -1.597643
+scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_8bigk")
 
 [node name="letter2" type="CanvasLayer" parent="." unique_id=1580486499]

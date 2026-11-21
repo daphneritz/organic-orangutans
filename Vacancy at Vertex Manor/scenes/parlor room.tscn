@@ -19,14 +19,14 @@ shader = ExtResource("4_vum12")
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/outline_width = 20.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
+radius = 85.0
+height = 424.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mqkg7"]
 shader = ExtResource("4_vum12")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_width = 10.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bigk"]
-radius = 85.0
-height = 424.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(63, 66)
@@ -55,15 +55,15 @@ texture = ExtResource("4_iq5bm")
 [node name="will" type="Area2D" parent="." unique_id=2120410854]
 script = ExtResource("6_w75vo")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="will" unique_id=1831954276]
+position = Vector2(845, 417)
+shape = SubResource("CapsuleShape2D_8bigk")
+
 [node name="Wil" type="Sprite2D" parent="will" unique_id=1107752116]
 material = SubResource("ShaderMaterial_mqkg7")
 position = Vector2(848.00006, 397.00003)
 scale = Vector2(0.25970027, 0.2597003)
 texture = ExtResource("6_eqopf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="will" unique_id=1831954276]
-position = Vector2(845, 417)
-shape = SubResource("CapsuleShape2D_8bigk")
 
 [node name="map" type="Area2D" parent="." unique_id=1091541448]
 script = ExtResource("5_qpbud")
