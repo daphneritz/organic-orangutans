@@ -18,6 +18,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			if Dialogic.VAR.matilda.reporter_reveal: 
 				Dialogic.start("matilda no")
 			elif (Dialogic.VAR.matilda.spoke): 
-				Dialogic.start_timeline("mat2")
+				Dialogic.start("mat2")
 			else:
 				Dialogic.start("matilda convo")
