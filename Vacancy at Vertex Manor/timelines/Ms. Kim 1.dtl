@@ -30,16 +30,6 @@ if {matilda.spoke} > 0.0:
 				"Ms Kim": Gertrude has lived in this house with Casper since Anthony disappeared. She must know a lot about what goes on under its roof. Now, take care!
 				set {kim.gertrude} = true
 				[end_timeline]
-		- Before I go...
-			"Ms Kim": And, well... not to be a gossip...
-			- How do you know Anthony?
-				- 
-				"Ms Kim": He's my nephew. I used to live in this house as a girl and wanted to see it again before it was passed on. Take care!
-				[end_timeline]
-			- Who else should I talk to?
-				"Ms Kim": Gertrude's been living in this house since Anthony disappeared. She might know a thing or two about what's going on under the roof. Take care now!
-				set {kim.gertrude} = true
-				[end_timeline]
 else:
 	- No, I haven't.
 		"Ms Kim": Well, be careful. She's quick to put her hackles up. She doesn't like people prying into her life, especially after the news came poking around after Anthony's disappearence.
