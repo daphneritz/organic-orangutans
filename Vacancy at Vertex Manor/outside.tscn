@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://cv32bmeac5mhw" path="res://outside.gd" id="2_hne82"]
 [ext_resource type="Texture2D" uid="uid://lx8ot3o73exs" path="res://assets/updated rooms/doll house (1).jpg" id="2_pyvco"]
 [ext_resource type="Texture2D" uid="uid://dwiftgktgleop" path="res://assets/updated rooms/outside of the house (1).jpg" id="3_n6vtj"]
+[ext_resource type="Texture2D" uid="uid://cvlyibe6iqpfe" path="res://assets/icons/bedroom icon.png" id="5_nnj4j"]
+[ext_resource type="Texture2D" uid="uid://kll6u277gg55" path="res://assets/icons/FireplaceIcon.png" id="6_0b51g"]
+[ext_resource type="Texture2D" uid="uid://c4i6t12kuyxbs" path="res://assets/icons/FinishedDoor.png" id="7_t0m8u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(1166, 657)
@@ -11,10 +14,25 @@ size = Vector2(1166, 657)
 [node name="Node2D" type="Node2D" unique_id=1325597493]
 script = ExtResource("1_n6vtj")
 
-[node name="DollHouse(1)" type="Sprite2D" parent="." unique_id=457515050]
-position = Vector2(583.90295, 308.75003)
-scale = Vector2(1.0135907, 1.0135908)
+[node name="DollHouse(1)" type="Sprite2D" parent="." unique_id=1448954746]
+position = Vector2(577.4074, 307.24997)
+scale = Vector2(1.0092989, 1.009299)
 texture = ExtResource("2_pyvco")
+
+[node name="BedroomIcon" type="Sprite2D" parent="DollHouse(1)" unique_id=1136321417]
+position = Vector2(-145.05853, 121.61911)
+scale = Vector2(0.038545962, 0.03854595)
+texture = ExtResource("5_nnj4j")
+
+[node name="FireplaceIcon" type="Sprite2D" parent="DollHouse(1)" unique_id=844144546]
+position = Vector2(-146.04932, 245.46747)
+scale = Vector2(0.03688442, 0.036884427)
+texture = ExtResource("6_0b51g")
+
+[node name="FinishedDoor" type="Sprite2D" parent="DollHouse(1)" unique_id=2006584170]
+position = Vector2(-5.357544, 250.42145)
+scale = Vector2(0.03261209, 0.03261209)
+texture = ExtResource("7_t0m8u")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1932199514]
 script = ExtResource("2_hne82")

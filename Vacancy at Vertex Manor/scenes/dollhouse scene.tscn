@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lx8ot3o73exs" path="res://assets/updated rooms/doll house (1).jpg" id="6_5u1x5"]
 [ext_resource type="Texture2D" uid="uid://cvlyibe6iqpfe" path="res://assets/icons/bedroom icon.png" id="6_643ye"]
 [ext_resource type="Script" uid="uid://cbtkbaeubvb6" path="res://scenes/bedroomlaunch.gd" id="6_spsmk"]
+[ext_resource type="Texture2D" uid="uid://c4i6t12kuyxbs" path="res://assets/icons/FinishedDoor.png" id="8_643ye"]
 [ext_resource type="Texture2D" uid="uid://kll6u277gg55" path="res://assets/icons/FireplaceIcon.png" id="8_ryhwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
@@ -58,6 +59,11 @@ texture = ExtResource("6_643ye")
 position = Vector2(430, 555)
 scale = Vector2(0.037227403, 0.037227415)
 texture = ExtResource("8_ryhwd")
+
+[node name="FinishedDoor" type="Sprite2D" parent="." unique_id=1037412327]
+position = Vector2(572.00006, 560.00006)
+scale = Vector2(0.032915346, 0.032915346)
+texture = ExtResource("8_643ye")
 
 [connection signal="input_event" from="parlor room" to="parlor room" method="_on_input_event"]
 [connection signal="input_event" from="dining room" to="parlor room" method="_on_dining_room_input_event"]
