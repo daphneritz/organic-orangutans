@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnev0fcgh5bp4"
-path="res://.godot/imported/dollhouse replacement.png-c6b09b08afb25c7e03d096578eca3c2e.ctex"
+uid="uid://dglaxs0ppleve"
+path="res://.godot/imported/MapIconFinished.png-ce5c18a570f5da29f1b1b55a81651224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dollhouse replacement.png"
-dest_files=["res://.godot/imported/dollhouse replacement.png-c6b09b08afb25c7e03d096578eca3c2e.ctex"]
+source_file="res://assets/icons/MapIconFinished.png"
+dest_files=["res://.godot/imported/MapIconFinished.png-ce5c18a570f5da29f1b1b55a81651224.ctex"]
 
 [params]
 

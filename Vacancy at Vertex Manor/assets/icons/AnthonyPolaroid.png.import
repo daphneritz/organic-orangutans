@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs7rbx07v7qrb"
-path="res://.godot/imported/split view house.jpg-e8518ad1072c1b04e6e7e16cf889a101.ctex"
+uid="uid://crmhx2icmctdb"
+path="res://.godot/imported/AnthonyPolaroid.png-a2a6cb7da87a14c8b9a89d0dc66dea4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/split view house.jpg"
-dest_files=["res://.godot/imported/split view house.jpg-e8518ad1072c1b04e6e7e16cf889a101.ctex"]
+source_file="res://assets/icons/AnthonyPolaroid.png"
+dest_files=["res://.godot/imported/AnthonyPolaroid.png-a2a6cb7da87a14c8b9a89d0dc66dea4e.ctex"]
 
 [params]
 

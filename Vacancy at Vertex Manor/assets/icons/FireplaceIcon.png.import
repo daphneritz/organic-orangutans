@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://664ro0aoxyr8"
-path="res://.godot/imported/logo demo 2.png-26453d724548b4e8ddb38e40f17e0484.ctex"
+uid="uid://kll6u277gg55"
+path="res://.godot/imported/FireplaceIcon.png-cb68a3a4907da19ed948c2c1b8f1e86b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/logo demo 2.png"
-dest_files=["res://.godot/imported/logo demo 2.png-26453d724548b4e8ddb38e40f17e0484.ctex"]
+source_file="res://assets/icons/FireplaceIcon.png"
+dest_files=["res://.godot/imported/FireplaceIcon.png-cb68a3a4907da19ed948c2c1b8f1e86b.ctex"]
 
 [params]
 

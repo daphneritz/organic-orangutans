@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftnlqq31xsl1"
-path="res://.godot/imported/parlor room.png-642c81b77c1415499ee9ad886cf92bec.ctex"
+uid="uid://cru3x7qtftmtt"
+path="res://.godot/imported/NEWMatilda.png-869561c25bf14a15f43930e95468ec13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/parlor room.png"
-dest_files=["res://.godot/imported/parlor room.png-642c81b77c1415499ee9ad886cf92bec.ctex"]
+source_file="res://assets/NEWMatilda.png"
+dest_files=["res://.godot/imported/NEWMatilda.png-869561c25bf14a15f43930e95468ec13.ctex"]
 
 [params]
 

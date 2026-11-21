@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8ciuit3hxobp"
-path="res://.godot/imported/entryway.jpg-fa36687dd14fb462f0e98f1e75cf9a8c.ctex"
+uid="uid://ber73vqbi3q78"
+path="res://.godot/imported/TransparentLetter.png-d75e8ad7f0a60fe3ad6503a3dd080e61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/entryway.jpg"
-dest_files=["res://.godot/imported/entryway.jpg-fa36687dd14fb462f0e98f1e75cf9a8c.ctex"]
+source_file="res://assets/TransparentLetter.png"
+dest_files=["res://.godot/imported/TransparentLetter.png-d75e8ad7f0a60fe3ad6503a3dd080e61.ctex"]
 
 [params]
 

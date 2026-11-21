@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://dnutdexa8aljs" path="res://scenes/parlor room launch.gd" id="2_jotf0"]
 [ext_resource type="Script" uid="uid://bpd2mujdqotdh" path="res://scenes/dining room launch.gd" id="4_eibs5"]
 [ext_resource type="Texture2D" uid="uid://lx8ot3o73exs" path="res://assets/updated rooms/doll house (1).jpg" id="6_5u1x5"]
+[ext_resource type="Texture2D" uid="uid://cvlyibe6iqpfe" path="res://assets/icons/bedroom icon.png" id="6_643ye"]
 [ext_resource type="Script" uid="uid://cbtkbaeubvb6" path="res://scenes/bedroomlaunch.gd" id="6_spsmk"]
+[ext_resource type="Texture2D" uid="uid://kll6u277gg55" path="res://assets/icons/FireplaceIcon.png" id="8_ryhwd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(115, 129.5)
@@ -46,6 +48,16 @@ script = ExtResource("6_spsmk")
 visible = false
 position = Vector2(424.125, 430)
 shape = SubResource("RectangleShape2D_oe1vg")
+
+[node name="BedroomIcon" type="Sprite2D" parent="." unique_id=783964820]
+position = Vector2(431, 430)
+scale = Vector2(0.038904395, 0.038904388)
+texture = ExtResource("6_643ye")
+
+[node name="FireplaceIcon" type="Sprite2D" parent="." unique_id=1135340600]
+position = Vector2(430, 555)
+scale = Vector2(0.037227403, 0.037227415)
+texture = ExtResource("8_ryhwd")
 
 [connection signal="input_event" from="parlor room" to="parlor room" method="_on_input_event"]
 [connection signal="input_event" from="dining room" to="parlor room" method="_on_dining_room_input_event"]

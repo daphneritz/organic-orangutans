@@ -4,14 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://b0u60tcgqr2pt" path="res://assets/updated rooms/FinalProlouge!.jpg" id="2_u7rak"]
 [ext_resource type="Script" uid="uid://oa8yl0rgvil6" path="res://scenes/envelope.gd" id="3_4yyrv"]
 [ext_resource type="Script" uid="uid://cpcwxqo3vbt77" path="res://scenes/letter viewer.gd" id="4_g07rj"]
-[ext_resource type="Texture2D" uid="uid://4cdvrn4kwgv3" path="res://assets/polaroid ant.png" id="5_2mwj1"]
 [ext_resource type="FontFile" uid="uid://dsl26d1748wjy" path="res://assets/SpecialElite-Regular.ttf" id="6_x3tx8"]
+[ext_resource type="Texture2D" uid="uid://crmhx2icmctdb" path="res://assets/icons/AnthonyPolaroid.png" id="7_10wes"]
+[ext_resource type="Texture2D" uid="uid://ber73vqbi3q78" path="res://assets/TransparentLetter.png" id="7_x3tx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bigk"]
 size = Vector2(241.72827, 433.66748)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bigk"]
-bg_color = Color(1, 1, 1, 1)
 
 [node name="Node2D2" type="Node2D" unique_id=305958757]
 script = ExtResource("1_u7rak")
@@ -46,43 +44,48 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="letter2/Pages" unique_id=1323404607]
-custom_maximum_size = Vector2(1000, 1000)
-layout_mode = 0
-offset_left = 469.0
-offset_top = 173.0
-offset_right = 750.322
-offset_bottom = 514.6597
-rotation = -0.04468735
+[node name="TransparentLetter" type="Sprite2D" parent="letter2/Pages" unique_id=2063917582]
+position = Vector2(551.00006, 304.99997)
+rotation = -0.09087894
+scale = Vector2(0.20710231, 0.20710231)
+texture = ExtResource("7_x3tx8")
+
+[node name="Label" type="Label" parent="letter2/Pages/TransparentLetter" unique_id=1323404607]
+custom_maximum_size = Vector2(10000, 10000)
+offset_left = -882.30225
+offset_top = -976.51697
+offset_right = 925.69775
+offset_bottom = 1574.4474
+rotation = 0.0020972537
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_x3tx8")
-theme_override_styles/normal = SubResource("StyleBoxFlat_8bigk")
-text = "   
-   There will be a will reading
-   at Vertex Manor tomorrow. 
-   Check it out, will you? It
-   should be a pretty boring 
-   affair. Anthony Gon's estate...
-   everything's probably going to
-   his kid, Casper. 
-   Perfect for your first 
-   solo assignment! 
-   Thanks. 
-                  - G.N."
+theme_override_font_sizes/font_size = 120
+text = "
+
+There will be a will reading 
+at Vertex Manor tomorrow. I 
+suspect something is going
+to go down. Anthony Gon's 
+estate... 
+
+He's officially been missing 
+for ten years, so his will is 
+being executed. If you want 
+a good story, I'd check it out.
+
+You're welcome. 
+     - a friendly reader
+                  "
 autowrap_mode = 2
-max_lines_visible = 13
+max_lines_visible = 34
 visible_characters = 1000
 visible_ratio = 3.3333333
 
-[node name="TextureRect" type="TextureRect" parent="letter2/Pages" unique_id=37258225]
-layout_mode = 0
-offset_left = 577.0
-offset_top = 181.0
-offset_right = 764.0
-offset_bottom = 409.0897
-rotation = 0.12387514
-texture = ExtResource("5_2mwj1")
-expand_mode = 1
+[node name="AnthonyPolaroid" type="Sprite2D" parent="letter2/Pages" unique_id=2060150184]
+position = Vector2(561, 327)
+rotation = 0.10627604
+scale = Vector2(0.17391025, 0.17391028)
+texture = ExtResource("7_10wes")
 
 [node name="Fade" type="ColorRect" parent="letter2" unique_id=1297797891]
 modulate = Color(1, 1, 1, 0)
