@@ -22,7 +22,14 @@ boot_splash/stretch_mode=4
 boot_splash/use_filter=false
 boot_splash/image="uid://cyau14in6df8p"
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=30
+boot_splash+/native_splash/disable_native_boot_splash_not_completely=false
+boot_splash+/background/mode=1
+boot_splash+/background/image="uid://cyau14in6df8p"
+boot_splash+/logo/text=""
+boot_splash+/logo/size_percent=90.0
+boot_splash+/logo/show_fallback_logo=false
+boot_splash+/progress_bar/position=3
+boot_splash+/progress_bar/color=Color(0.7647059, 0.2627451, 0.30980393, 1)
 
 [audio]
 
@@ -32,6 +39,7 @@ buses/default_bus_layout="uid://b21gdmugk21yv"
 
 Dialogic="*uid://ds2q0uclmolvu"
 Gymnopedie="*uid://cf3ap6oa2vaa3"
+BootSplashPlus="*uid://bxpaidk3gi2da"
 
 [dialogic]
 
@@ -122,7 +130,7 @@ window/main_scene="uid://dg3twhrbqxny"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/boot_splash_plus/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [input]
 
